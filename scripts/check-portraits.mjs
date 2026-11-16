@@ -28,7 +28,8 @@ try {
   await page.locator('.about-photos').screenshot({ path: 'test-results/previews/portraits-about-mobile.png' });
   const alts = await page.locator('.hero-portrait img, .about-photos img').evaluateAll(images => images.map(image => image.alt));
   console.log('Dutch alt text: ' + alts.join(' / '));
-  await page.getByRole('combobox').selectOption('en');
+  await page.locator('app-language-select > button').click();
+  await page.getByRole('menuitemradio', { name: 'English', exact: true }).click();
   await page.waitForFunction(() => document.querySelector('.hero-portrait img').alt === 'Portrait of Robert Walhout');
   console.log('English hero alt: ' + await page.locator('.hero-portrait img').getAttribute('alt'));
   console.log(JSON.stringify({ errors }));

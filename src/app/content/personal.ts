@@ -1,6 +1,6 @@
 import { Education, Interest } from '../models/content';
 export const education: readonly Education[] = [
-  { title: 'Three completed Symfony courses', institution: 'SymfonyCasts', period: '2026' },
+  { title: 'Symfony; DTO\s, datastructures, Twig, PHP', institution: 'SymfonyCasts', period: '2026' },
   { title: 'HBO-ICT', institution: 'University of Applied Sciences, Vlissingen', period: '2012 — 2018' },
   { title: 'MBO 4-ICT — Private Digital Researcher', institution: 'ROC Zeeland ICT, Vlissingen', period: '2007 — 2011' }
 ];
@@ -12,6 +12,15 @@ export const languages = [
   { name: 'Dutch', level: 'C2' }, { name: 'English', level: 'C1' },
   { name: 'German', level: 'A2' }, { name: 'Russian', level: 'A1' }
 ] as const;
+export const developmentApproach = {
+  title: 'How I approach development',
+  quote: 'An engineer is somebody who understands constraints imposed by reality',
+  paragraphs: [
+    'AI makes it easy to produce a lot of code. For me, the craft lies in understanding what you are building, where an LLM helps and where its limits are. A human remains responsible for the code, even when an LLM wrote it.',
+    'When discussing ideas with customers, I want to understand the goal and what is feasible in practice. Recognizing early that something is not technically possible, worth the cost or realistic is part of the work. It helps us find a better approach together.',
+    'My AI game project raises a similar question: generating more content does not automatically make a better game. I want to explore whether AI can help build something that is actually fun to play.'
+  ]
+} as const;
 export const interests: readonly Interest[] = [
   { name: 'Music production', detail: 'Making electronic music with software and hardware instruments, including Circuit Tracks and the Arturia MicroFreak. I enjoy experimenting with synthesizers and MIDI workflows.', icon: 'music', links: [
     { label: 'Dawless synth performance (YouTube)', url: 'https://www.youtube.com/watch?v=MClX0UCTC9c', embedUrl: 'https://www.youtube-nocookie.com/embed/MClX0UCTC9c' },

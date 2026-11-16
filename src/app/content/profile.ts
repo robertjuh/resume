@@ -23,8 +23,8 @@ export const links = {
 } as const;
 export const sections = [
   { id: 'home', label: 'Overview', icon: 'grid' },
-  { id: 'competencies', label: 'Core competencies', icon: 'layers' },
   { id: 'experience', label: 'Experience', icon: 'briefcase' },
+  { id: 'competencies', label: 'Core competencies', icon: 'layers' },
   { id: 'projects', label: 'Projects', icon: 'layers' },
   { id: 'skills', label: 'Skills', icon: 'code' },
   { id: 'about', label: 'About', icon: 'user' },

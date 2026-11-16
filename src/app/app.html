@@ -22,11 +22,8 @@
       <a class="brand" href="#home" [attr.aria-label]="'rw. Developer portfolio - Robert Walhout home' | t" (click)="navigate('home')"><span class="brand-mark">rw<span>.</span></span><span class="brand-caption">DEVELOPER PORTFOLIO</span></a>
       <!-- <span class="breadcrumb"><span class="muted">Portfolio</span><span>/</span><span>{{ currentSection() | t }}</span></span> -->
       <div class="topbar-actions">
-        <select #languageSelect class="language-select" [attr.aria-label]="'Language' | t" [value]="locale.language()" (change)="locale.setLanguage(languageSelect.value === 'en' ? 'en' : 'nl')">
-          <option value="nl" lang="nl">Nederlands</option>
-          <option value="en" lang="en">English</option>
-        </select>
-        <a class="download-button" [href]="cvUrl()" [download]="cvFilename()"><app-icon name="download" /> {{ 'Download CV' | t }}</a>
+        <app-language-select />
+        <!-- <a class="download-button" [href]="cvUrl()" [download]="cvFilename()"><app-icon name="download" /> {{ 'Download CV' | t }}</a> -->
         <button id="navigation-toggle" type="button" class="icon-button" [attr.aria-label]="(mobileOpen() ? 'Close navigation' : 'Open navigation') | t" [attr.aria-expanded]="mobileOpen()" aria-controls="sidebar" (click)="mobileOpen.set(!mobileOpen())"><app-icon [name]="mobileOpen() ? 'close' : 'menu'" /></button>
       </div>
     </div>
@@ -39,16 +36,16 @@
           <span class="portrait-code" aria-hidden="true">&lt;/&gt;</span>
         </figure>
       </section>
+      <section id="experience" class="section" tabindex="-1" aria-labelledby="experience-title">
+        <div class="section-heading"><div><h2 id="experience-title">{{ 'Where I\'ve been:' | t }}</h2></div><span class="section-aside">{{ 'Basically a bunch of Typescript, NodeJS and ERP systems.' | t }}</span></div>
+        <app-experience-timeline />
+      </section>
       <section id="competencies" class="section competencies-section" tabindex="-1" aria-labelledby="competencies-title">
         <div class="section-heading">
           <div><span class="eyebrow">{{ 'AT A GLANCE' | t }}</span><h2 id="competencies-title">{{ 'Core competencies' | t }}</h2></div>
           <a class="text-button" href="#skills" (click)="navigate('skills')">{{ 'Explore all skills' | t }} <app-icon name="arrow" /></a>
         </div>
         <app-core-competencies />
-      </section>
-      <section id="experience" class="section" tabindex="-1" aria-labelledby="experience-title">
-        <div class="section-heading"><div><span class="eyebrow"> {{ 'THE PROFESSIONAL CHAPTER' | t }}</span><h2 id="experience-title">{{ 'Where I\'ve been.' | t }}</h2></div><span class="section-aside">{{ 'Basically a bunch of Typescript, NodeJS and ERP systems.' | t }}</span></div>
-        <app-experience-timeline />
       </section>
       <section id="projects" class="section" tabindex="-1" aria-labelledby="projects-title">
         <div class="section-heading"><div><span class="eyebrow"> {{ 'BUILT & EXPLORED' | t }}</span><h2 id="projects-title">{{ 'A few things I\'ve worked on.' | t }}</h2></div></div>
@@ -62,6 +59,17 @@
       </section>
       <section id="about" class="section" tabindex="-1" aria-labelledby="about-title">
         <div class="section-heading"><div><span class="eyebrow"> {{ 'AWAY FROM THE EDITOR' | t }}</span><h2 id="about-title">{{ 'More about me.' | t }}</h2></div></div>
+        <section class="development-approach" aria-labelledby="development-approach-title">
+          <h3 id="development-approach-title">{{ developmentApproach.title | t }}</h3>
+          <div class="approach-grid">
+            <blockquote lang="en"><p>“{{ developmentApproach.quote }}”</p></blockquote>
+            <div class="approach-copy">
+              @for (paragraph of developmentApproach.paragraphs; track paragraph) {
+                <p>{{ paragraph | t }}</p>
+              }
+            </div>
+          </div>
+        </section>
         <div class="about-photos">
           <!-- @for (photo of portraits.about; track photo.src) {
             <figure>
@@ -116,7 +124,7 @@
         </div><div class="language-list"><span class="eyebrow">{{ 'Languages' | t }}</span><div>@for (language of languages; track language.name) { <span>{{ (language.name) | t }} <small class="mono">{{ language.level }}</small></span> }</div></div></div><div class="education-card"><h3><app-icon name="briefcase" /> {{ 'Education & learning' | t }}</h3>@for (item of education; track item.title) { <div class="education-item"><span class="mono muted">{{ (item.period) | t }}</span><h4>{{ (item.title) | t }}</h4><p>{{ (item.institution) | t }}</p></div> }<div class="certifications"><span class="eyebrow">{{ 'Certifications · 2017' | t }}</span>@for (item of certifications; track item.title) { <p><app-icon name="check" />{{ (item.title) | t }}</p> }</div></div></div>
       </section>
       <section id="contact" class="section contact-section" tabindex="-1" aria-labelledby="contact-title">
-        <div><span class="eyebrow"> {{ 'START A CONVERSATION' | t }}</span><h2 id="contact-title">{{ 'Something interesting' | t }}<br>{{ 'in mind' | t }}<span class="name-period">?</span></h2><p>{{ (profile.opportunity) | t }}</p><a class="contact-email" [href]="links.email">{{ (profile.email) | t }} <app-icon name="external" /></a><div class="contact-links"><a [href]="links.github" target="_blank" rel="noopener noreferrer"><app-icon name="github" variant="social" /> GitHub <app-icon name="external" /></a><a [href]="links.linkedin" target="_blank" rel="noopener noreferrer"><app-icon name="linkedin" variant="social" /> LinkedIn <app-icon name="external" /></a><a [href]="cvUrl()" [download]="cvFilename()"><app-icon name="download" /> {{ 'Download CV' | t }}</a></div></div><div class="contact-art" aria-hidden="true"><span>&lt;</span><span class="contact-slash">/</span><span>&gt;</span></div>
+        <div><span class="eyebrow"> {{ 'START A CONVERSATION' | t }}</span><h2 id="contact-title">{{ 'Something interesting' | t }}<br>{{ 'in mind' | t }}<span class="name-period">?</span></h2><p>{{ (profile.opportunity) | t }}</p><a class="contact-email" [href]="links.email">{{ (profile.email) | t }} <app-icon name="external" /></a><div class="contact-links"><a [href]="links.github" target="_blank" rel="noopener noreferrer"><app-icon name="github" variant="social" /> GitHub <app-icon name="external" /></a><a [href]="links.linkedin" target="_blank" rel="noopener noreferrer"><app-icon name="linkedin" variant="social" /> LinkedIn <app-icon name="external" /></a></div></div><div class="contact-art" aria-hidden="true"><span>&lt;</span><span class="contact-slash">/</span><span>&gt;</span></div>
       </section>
     </main>
     <footer class="site-footer"><span>Robert Walhout <span class="muted">· {{ profile.title | t }}</span></span><a href="#home" (click)="navigate('home')">{{ 'Back to top' | t }} ↑</a><app-footer-quotes class="footer-built mono" /></footer>

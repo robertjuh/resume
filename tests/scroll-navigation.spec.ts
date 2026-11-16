@@ -9,7 +9,7 @@ test('scrolling keeps the URL and navigation aligned without growing history', a
   await page.goto('./?source=scroll-test#home');
   await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
   const initialHistoryLength = await page.evaluate(() => history.length);
-  const ids = ['home', 'competencies', 'experience', 'projects', 'skills', 'about', 'contact'];
+  const ids = ['home', 'experience', 'competencies', 'projects', 'skills', 'about', 'contact'];
   for (const id of [...ids, ...ids.slice(0, -1).reverse()]) {
     await page.locator('#' + id).evaluate(element => element.scrollIntoView({ behavior: 'instant', block: 'start' }));
     await expect.poll(() => page.evaluate(() => location.hash)).toBe('#' + id);

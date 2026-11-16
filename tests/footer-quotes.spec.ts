@@ -133,7 +133,11 @@ test('reduced-motion quotes keep a gentle fade and retain their wording across l
   const first = await active.innerText();
   await expect(page.locator('app-footer-quotes')).toHaveAttribute('lang', 'en');
   await expect(active).toHaveCSS('transition-property', 'opacity');
-  await page.getByRole('combobox').selectOption('en');
+  await page.locator('app-language-select > button').click();
+  await page.clock.runFor(20);
+  await page.getByRole('menuitemradio', { name: 'English', exact: true }).click();
+  await page.clock.runFor(20);
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(active).toHaveText(first);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });

@@ -3,7 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { LanguageService } from './i18n/language';
 import { Translate } from './i18n/translate';
 import { profile, links, sections, portraits } from './content/profile';
-import { education, certifications, languages, interests } from './content/personal';
+import { education, certifications, languages, interests, developmentApproach } from './content/personal';
 import { Icon } from './components/icon';
 import { ExperienceTimeline } from './components/experience-timeline';
 import { ProjectGrid } from './components/project-grid';
@@ -12,10 +12,11 @@ import { SkillExplorer } from './components/skill-explorer';
 import { CoreCompetencies } from './components/core-competencies';
 import { PrintResume } from './components/print-resume';
 import { FooterQuotes } from './components/footer-quotes';
+import { LanguageSelect } from './components/language-select';
 
 @Component({
   selector: 'app-root',
-  imports: [Translate, Icon, ExperienceTimeline, ProjectGrid, EngineeringNotes, SkillExplorer, CoreCompetencies, PrintResume, FooterQuotes],
+  imports: [Translate, Icon, ExperienceTimeline, ProjectGrid, EngineeringNotes, SkillExplorer, CoreCompetencies, PrintResume, FooterQuotes, LanguageSelect],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
   host: { '(document:keydown.escape)': 'closeNavigation()' }
@@ -23,7 +24,7 @@ import { FooterQuotes } from './components/footer-quotes';
 export class App implements AfterViewInit {
   protected readonly locale = inject(LanguageService);
   protected readonly currentSection = computed(() => sections.find(section => section.id === this.activeSection())?.label ?? 'Overview');
-  protected readonly cvUrl = computed(() => 'cv/robert-walhout-' + this.locale.language() + '.pdf');
+  // protected readonly cvUrl = computed(() => 'cv/robert-walhout-' + this.locale.language() + '.pdf');
   protected readonly cvFilename = computed(() => 'Robert-Walhout-CV-' + this.locale.language().toUpperCase() + '.pdf');
   protected readonly profile = profile;
   protected readonly portraits = portraits;
@@ -32,6 +33,7 @@ export class App implements AfterViewInit {
   protected readonly education = education;
   protected readonly certifications = certifications;
   protected readonly languages = languages;
+  protected readonly developmentApproach = developmentApproach;
   private readonly sanitizer = inject(DomSanitizer);
   protected readonly interests = interests.map(interest => ({
     ...interest,

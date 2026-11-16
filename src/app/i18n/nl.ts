@@ -39,7 +39,7 @@ export const dutch: Readonly<Record<string, string>> = {
   "Business software, real complexity": "Bedrijfssoftware, echte complexiteit",
   "ERP · APIs · Data-heavy interfaces": "ERP · API’s · Datarijke interfaces",
   "THE PROFESSIONAL CHAPTER": "MIJN LOOPBAAN",
-  "Where I've been.": "Mijn werkervaring.",
+  "Where I've been:": "Mijn werkervaring:",
   "A quick overview on what has been keeping me busy:": "Een overzichtje van waar ik mijzelf onder meer mee bezig heb gehouden:",
   "Teams, ERP systems, and a lot of TypeScript.": "Teams, ERP systemen en een flinke bak TypeScript.",
   "BUILT & EXPLORED": "GEBOUWD & ONTDEKT",
@@ -324,5 +324,9 @@ export const dutch: Readonly<Record<string, string>> = {
   "Interested in learning Laravel and exploring another approach to PHP web development.": "Ik wil Laravel leren en een andere aanpak voor PHP-webontwikkeling verkennen.",
   "Interested in learning Vue and comparing its approach to building interfaces with my Angular experience.": "Ik wil Vue leren en de aanpak voor het bouwen van interfaces vergelijken met mijn Angular-ervaring.",
   "Interested in learning more about software design patterns and when to apply them to keep code clear and maintainable.": "Ik wil meer leren over softwareontwerppatronen en wanneer je ze toepast om code duidelijk en onderhoudbaar te houden.",
-  "Interested in learning more about Retrieval-Augmented Generation (RAG) and how it is used in applications.": "Ik wil meer leren over Retrieval-Augmented Generation (RAG) en hoe het in applicaties wordt toegepast."
+  "Interested in learning more about Retrieval-Augmented Generation (RAG) and how it is used in applications.": "Ik wil meer leren over Retrieval-Augmented Generation (RAG) en hoe het in applicaties wordt toegepast.",
+  "How I approach development": "Hoe ik naar softwareontwikkeling kijk",
+  "AI makes it easy to produce a lot of code. For me, the craft lies in understanding what you are building, where an LLM helps and where its limits are. A human remains responsible for the code, even when an LLM wrote it.": "Met AI kun je snel veel code maken. Voor mij zit het vakmanschap in begrijpen wat je bouwt, waar een LLM helpt en waar de grenzen liggen. Ook als een LLM de code schrijft, blijft een mens ervoor verantwoordelijk.",
+  "When discussing ideas with customers, I want to understand the goal and what is feasible in practice. Recognizing early that something is not technically possible, worth the cost or realistic is part of the work. It helps us find a better approach together.": "In gesprekken met klanten wil ik begrijpen wat ze willen bereiken en wat in de praktijk haalbaar is. Op tijd herkennen dat iets technisch niet mogelijk, niet rendabel of niet realistisch is, hoort voor mij bij het vak. Zo kun je samen naar een betere aanpak zoeken.",
+  "My AI game project raises a similar question: generating more content does not automatically make a better game. I want to explore whether AI can help build something that is actually fun to play.": "Bij mijn AI-gameproject speelt een vergelijkbare vraag: meer gegenereerde inhoud maakt een spel niet vanzelf beter. Ik wil onderzoeken of je met AI iets kunt bouwen dat ook echt leuk is om te spelen."
 };

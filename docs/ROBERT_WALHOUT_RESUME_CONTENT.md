@@ -379,6 +379,30 @@ Die nieuwsgierigheid herken ik ook in programmeren en games. Ik leer graag nieuw
 
 I enjoy projects where there's an interesting system to figure out, whether that's business software, a small market-data tool, or a game I want to play with friends. Outside programming, I make electronic music, play games, and spend time on psychology, philosophy and language learning.
 
+### How I approach development — confirmed owner principles, 16 November 2026
+
+Display this as a visible block in About, with the supplied quote. The owner supplied these principles in a screenshot and requested that they be expressed naturally rather than copied literally. They describe a personal approach, not additional professional achievements or completed AI-game features.
+
+**Quote:** “An engineer is somebody who understands constraints imposed by reality”
+
+Keep the quote in English in both language versions. No author attribution was supplied.
+
+**English:**
+
+AI makes it easy to produce a lot of code. For me, the craft lies in understanding what you are building, where an LLM helps and where its limits are. A human remains responsible for the code, even when an LLM wrote it.
+
+When discussing ideas with customers, I want to understand the goal and what is feasible in practice. Recognizing early that something is not technically possible, worth the cost or realistic is part of the work. It helps us find a better approach together.
+
+My AI game project raises a similar question: generating more content does not automatically make a better game. I want to explore whether AI can help build something that is actually fun to play.
+
+**Dutch — Hoe ik naar softwareontwikkeling kijk:**
+
+Met AI kun je snel veel code maken. Voor mij zit het vakmanschap in begrijpen wat je bouwt, waar een LLM helpt en waar de grenzen liggen. Ook als een LLM de code schrijft, blijft een mens ervoor verantwoordelijk.
+
+In gesprekken met klanten wil ik begrijpen wat ze willen bereiken en wat in de praktijk haalbaar is. Op tijd herkennen dat iets technisch niet mogelijk, niet rendabel of niet realistisch is, hoort voor mij bij het vak. Zo kun je samen naar een betere aanpak zoeken.
+
+Bij mijn AI-gameproject speelt een vergelijkbare vraag: meer gegenereerde inhoud maakt een spel niet vanzelf beter. Ik wil onderzoeken of je met AI iets kunt bouwen dat ook echt leuk is om te spelen.
+
 ---
 
 # PART B — ADDITIONAL PROJECT CANDIDATES (REVIEW BEFORE PUBLICATION)

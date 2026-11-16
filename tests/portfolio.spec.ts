@@ -100,7 +100,8 @@ test('AI tools, framework interests and actual experience stay distinct in both 
   await expect(page.locator('.skill-context')).toContainText('WDD');
   await expect(page.locator('.skill-context')).toContainText('Colijn');
 
-  await page.getByRole('combobox').selectOption('nl');
+  await page.locator('app-language-select > button').click();
+  await page.getByRole('menuitemradio', { name: 'Nederlands', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Frameworks & softwareontwerp', exact: true })).toBeVisible();
   await expect(page.locator('#skills')).toContainText('professionele ervaring met Angular');
   const dutchExploring = page.locator('.skill-group').filter({ has: page.getByRole('heading', { name: 'Verder verkennen', exact: true }) });
@@ -135,7 +136,8 @@ test('personal filter includes all personal projects and dashboard technical det
   await expect(dialog).not.toContainText(/BigQuery|React|Next.js/);
   await expect(dialog).toContainText('personal learning project');
   await page.keyboard.press('Escape');
-  await page.getByRole('combobox').selectOption('nl');
+  await page.locator('app-language-select > button').click();
+  await page.getByRole('menuitemradio', { name: 'Nederlands', exact: true }).click();
   await expect(page.locator('.filters button')).toHaveText(['Alle projecten', 'Persoonlijk', 'Professioneel']);
   await expect(page.getByRole('button', { name: 'Persoonlijk', exact: true })).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('.project-card')).toHaveCount(3);

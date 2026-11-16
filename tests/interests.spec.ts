@@ -22,7 +22,8 @@ test('only one interest opens at a time with mouse, keyboard and language switch
   await expect(psychology).toHaveAttribute('aria-expanded', 'false');
   await expect(about.locator('.interest-trigger[aria-expanded="true"]')).toHaveCount(1);
 
-  await page.getByRole('combobox').selectOption('en');
+  await page.locator('app-language-select > button').click();
+  await page.getByRole('menuitemradio', { name: 'English', exact: true }).click();
   const englishMusic = about.getByRole('button', { name: 'Music production', exact: true });
   await expect(englishMusic).toHaveAttribute('aria-expanded', 'true');
   await expect(about.getByRole('region', { name: 'Music production', exact: true })).toContainText('electronic music');

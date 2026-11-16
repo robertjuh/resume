@@ -21,7 +21,8 @@ try {
   const page = await browser.newPage();
   await page.goto('http://127.0.0.1:' + port + '/resume/');
   for (const language of ['nl', 'en']) {
-    await page.getByRole('combobox').selectOption(language);
+    await page.locator('app-language-select > button').click();
+    await page.getByRole('menuitemradio', { name: language === 'nl' ? 'Nederlands' : 'English', exact: true }).click();
     await page.waitForFunction(code => document.documentElement.lang === code, language);
     const bytes = await page.pdf({ format: 'A4', printBackground: false, preferCSSPageSize: true, tagged: true });
     for (const root of ['public/cv', 'dist/resume/browser/cv']) {
