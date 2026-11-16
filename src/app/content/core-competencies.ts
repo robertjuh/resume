@@ -10,7 +10,7 @@ export const coreCompetencies = [
     title: 'Backend development', icon: 'layers',
     description: 'Developing backend functionality within a fullstack JavaScript/TypeScript environment.',
     groups: [
-      { context: 'Professional experience', items: ['Node.js', 'NestJS'] }
+      { context: 'Professional experience', items: ['Node.js', 'NestJS, PHP'] }
     ]
   },
   {

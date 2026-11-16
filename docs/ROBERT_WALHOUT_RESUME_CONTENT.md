@@ -34,7 +34,17 @@
 
 ### Homepage introduction (short)
 
-I'm a software developer based in Goes, Netherlands, with more than seven years of professional experience building web applications. Most of my work has been in Angular, TypeScript, Node.js and NestJS, particularly on ERP systems and data-heavy business software.
+**Fullstack Software Developer**
+
+**7+ years of professional experience**
+
+**Angular · TypeScript · Node.js · NestJS**
+
+Experience building ERP systems, APIs and data-heavy business applications.
+
+The homepage shows the four core technologies as a compact list immediately below the experience headline. Location and hybrid/remote preferences remain alongside the contact actions.
+
+**Dutch:** Fullstack softwareontwikkelaar · 7+ jaar professionele ervaring. Ervaring met het bouwen van ERP-systemen, API’s en datarijke bedrijfsapplicaties.
 
 Outside work, I like building my own applications, exploring new tools, and occasionally turning a small idea into a much larger side project.
 
@@ -71,6 +81,10 @@ Worked on an ERP/business application for inventory forecasting and market data 
 - Developed across a frontend/backend stack using **Angular, TypeScript, Node.js, and NestJS**.
 - Worked with **Google Cloud** and Git-based development workflows, including **GitHub** and **GitLab**.
 - Gained professional experience developing software around complex operational data and business workflows.
+- Built a generic Angular table component to support different CRUD screens and custom modules (owner confirmation, 16 November 2026).
+- Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend (owner confirmation, 16 November 2026).
+- Worked with data scientists to make their data retrievable through APIs and present it in the frontend (owner confirmation, 16 November 2026).
+- Worked on graph and table components for Bex, the Angular business dashboard already illustrated in the portfolio.
 
 **Stack confirmed by original resume:** Angular, JavaScript, TypeScript, Node.js, NestJS, Google Cloud, GitHub, GitLab.
 
@@ -80,7 +94,6 @@ WDD built data-driven software for businesses in fresh produce and floriculture.
 
 **Links:** [WDD](https://wdd.nl/) · [Fresh IQ company background](https://www.agf.nl/article/9683958/wedodigital-greenmatch-en-dataresultz-bundelen-krachten-tot-fresh-iq/)
 
-<!-- TODO(REVIEW): Add 2–4 specific features that YOU personally delivered. -->
 <!-- TODO(REVIEW): Which frontend modules, filters, charts and business workflows can be discussed publicly? -->
 <!-- TODO(REVIEW): Confirm whether BigQuery, Firestore, MySQL, Memcached, RxJS and PrimeNG can be attributed publicly to this role. -->
 <!-- TODO(REVIEW): Add a technical challenge, what you did, and its outcome. Use numbers only when known. -->
@@ -237,6 +250,12 @@ A PHP/Symfony project for presenting market and economic indicators in a clearer
 **Professional work** · **Angular / TypeScript / Node.js / NestJS**
 
 A collection of professional experience developing ERP and business applications. The case studies can explain the types of workflows, interfaces and backend services involved in business software, with specific examples added after review.
+
+**Fresh-IQ / WDD case study — owner clarification, 16 November 2026:** The project card highlights the reusable Angular table component for CRUD screens and custom modules, contribution to setting up the replacement NestJS backend, and collaboration with data scientists on API access and frontend presentation. The detail view includes an explicit role and four technical focus paragraphs, with the existing Bex screenshot retained. The backend contribution is described as helping to set it up, without claiming sole ownership. Do not invent performance metrics, undocumented architecture or a repository.
+
+**Economic dashboard screenshot caption:** “Built to learn: API integrations, data storage and a working dashboard.” Dutch: “Gebouwd om te leren: API-koppelingen, gegevensopslag en een werkend dashboard.”
+
+**Projects introduction:** “A quick overview of what I've been working on.” Dutch: “Een overzichtje van waar ik mijzelf onder meer mee bezig heb gehouden:”
 
 **Relevant domains:** Inventory forecasting, market information, relationship management, article management, transactions, business workflows and cross-platform order-signature functionality.
 
@@ -479,6 +498,8 @@ The following topics have been discussed in detail in earlier coding conversatio
 - Git workflows, client requirements and business-process-oriented software design.
 
 **Editorial caution:** Real project implementation discussions are evidence of familiarity, not automatically evidence of deployment to production, personal ownership of a whole subsystem, or permission to reveal client specifics.
+
+**Private archival limit, owner clarification on 16 November 2026:** Further code and screenshots from the WDD/Fresh-IQ work are unavailable after the bankruptcy. Use the owner's confirmed recollections and the existing Bex screenshot; do not request replacement source material or publish the archival explanation as part of the case study. The reusable table component, contribution to the replacement NestJS backend and data-scientist collaboration are now confirmed; attribution of the additional tools below remains unconfirmed.
 
 ## 3a. Additional experience supplied on 10 November 2026 - review before public attribution
 

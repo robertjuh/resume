@@ -41,7 +41,7 @@ Browser checks cover desktop/mobile navigation, filtering, project walkthroughs,
 | src/app/content/core-competencies.ts | Eight bilingual competency cards: six professional strengths, personal PHP/Symfony learning and AI-tool experiments |
 | src/app/content/skills.ts | Three experience categories, AI tooling/learning copy and verified role/project links |
 | src/app/content/engineering-notes.ts | Owner-written notes; empty until reviewed text is supplied |
-| src/app/content/personal.ts | Education, certificates, languages and interests |
+| src/app/content/personal.ts | Education, certificates, languages, interests and the visible development philosophy/quote in About |
 | src/app/components/ | Timeline, projects, dialog, gallery, skills, icons and print resume |
 | src/app/app.html | Page sections and responsive navigation |
 | src/styles.css | CSS layers, responsive layouts, reduced motion and A4 printing |
@@ -66,9 +66,9 @@ Skills use Professional experience, Personal projects & tooling, and Exploring n
 
 To publish an Engineering Note, add a reviewed id, title, summary and paragraphs to src/app/content/engineering-notes.ts and translate the copy in nl.ts. The entire section stays hidden while the array is empty. Draft topics stay in CONTENT_REVIEW.md, outside public assets.
 
-The site defaults to Dutch. The language dropdown in the top bar switches all copy, accessible labels and metadata between Dutch and English. The choice is stored locally under portfolio-language; blocked storage does not prevent switching.
+The site defaults to Dutch. The flag dropdown in the top bar switches all copy, accessible labels and metadata between Dutch and English. The choice is stored locally under portfolio-language; blocked storage does not prevent switching.
 
-Download CV links serve a real static PDF in the chosen language from public/cv/. The separate print layout remains available through the browser's regular print command.
+Static PDF CVs are available in both languages in public/cv/. The separate print layout remains available through the browser's regular print command.
 
 Translations live in src/app/i18n/nl.ts, keyed by the existing English Part A copy. Project/technology names and the supplied qualification wording are preserved. Add a Dutch translation when updating or adding English content; no live translation service is used.
 

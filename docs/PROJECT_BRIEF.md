@@ -167,6 +167,8 @@ My strongest professional background:
 
 The hero should be short and direct.
 
+Owner-approved update, 16 November 2026: show “7+ years of professional experience”, a compact Angular/TypeScript/Node.js/NestJS list and a short introduction about ERP systems, APIs and data-heavy business applications. Translate the experience headline and introduction into Dutch. Retain the existing section order, CV-link visibility and footer wording. Strengthen the WDD/Fresh-IQ project with the confirmed generic Angular table component for CRUD/custom modules, contribution to setting up a new NestJS backend replacing vanilla JavaScript, and collaboration with data scientists on API access and frontend presentation. Use the existing Bex screenshot; no further code or screenshots are available. Keep the archival explanation out of public copy. Also replace the economic dashboard's self-deprecating caption with learning-focused wording and give the Projects introduction an English source key with its existing Dutch translation.
+
 Use a headline such as:
 
 "Robert Walhout"
@@ -607,6 +609,8 @@ For example:
 Do not invent personal anecdotes or personality traits.
 
 Use short, honest descriptions or leave content fields for me to complete.
+
+Owner clarification, 16 November 2026: add a visible “How I approach development” block in About, with the exact quote “An engineer is somebody who understands constraints imposed by reality”. Express these supplied personal principles naturally in Dutch and English: understand an LLM's limits; keep a human responsible for its code; recognize technical, economic and practical constraints early in customer discussions; and explore whether AI can make a game genuinely fun rather than merely generate more content. Keep the quote in English, without an invented author attribution. This is personal philosophy, not a claim of shipped AI-game functionality.
 
 ### Languages
 

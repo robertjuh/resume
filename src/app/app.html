@@ -29,7 +29,7 @@
     </div>
     <main id="main-content" tabindex="-1">
       <section id="home" class="hero" tabindex="-1" aria-labelledby="hero-title">
-        <div class="hero-content"><div class="eyebrow hero-eyebrow"><span class="status-dot"></span> {{ 'FULLSTACK SOFTWARE DEVELOPER' | t }}</div><h1 id="hero-title">Robert<br>Walhout<span class="name-period">.</span></h1><p class="hero-subtitle">{{ 'Building web applications.' | t }}<br><span>{{ 'Exploring what comes next.' | t }}</span></p><p class="hero-description">{{ (profile.introduction) | t }}</p><div class="hero-actions"><a class="button primary" href="#projects" (click)="navigate('projects')">{{ 'Explore my work' | t }} <app-icon name="arrow" /></a><a class="button secondary" href="#contact" (click)="navigate('contact')">{{ 'Let\'s talk' | t }} <app-icon name="mail" /></a></div><div class="hero-location"><app-icon name="pin" />{{ (profile.shortLocation) | t }}<span class="location-separator">/</span><span>{{ 'Open to hybrid & remote' | t }}</span></div></div>
+        <div class="hero-content"><div class="eyebrow hero-eyebrow"><span class="status-dot"></span> {{ 'FULLSTACK SOFTWARE DEVELOPER' | t }}</div><h1 id="hero-title">Robert<br>Walhout<span class="name-period">.</span></h1><p class="hero-subtitle">{{ profile.experienceHeadline | t }}</p><ul class="hero-stack" [attr.aria-label]="'Core technologies' | t">@for (technology of profile.core; track technology) { <li>{{ technology }}</li> }</ul><p class="hero-description">{{ (profile.introduction) | t }}</p><div class="hero-actions"><a class="button primary" href="#projects" (click)="navigate('projects')">{{ 'Explore my work' | t }} <app-icon name="arrow" /></a><a class="button secondary" href="#contact" (click)="navigate('contact')">{{ 'Let\'s talk' | t }} <app-icon name="mail" /></a></div><div class="hero-location"><app-icon name="pin" />{{ (profile.shortLocation) | t }}<span class="location-separator">/</span><span>{{ 'Open to hybrid & remote' | t }}</span></div></div>
         <figure class="hero-portrait">
           <img [src]="portraits.hero.src" [srcset]="portraits.hero.srcset" sizes="(max-width: 650px) calc(100vw - 44px), (max-width: 1150px) 280px, 330px" [width]="portraits.hero.width" [height]="portraits.hero.height" [alt]="portraits.hero.alt | t" fetchpriority="high" decoding="async">
           <figcaption><span class="tiny-dot"></span> Robert Walhout <span class="portrait-caption-location">{{ profile.shortLocation | t }}</span></figcaption>
@@ -49,7 +49,7 @@
       </section>
       <section id="projects" class="section" tabindex="-1" aria-labelledby="projects-title">
         <div class="section-heading"><div><span class="eyebrow"> {{ 'BUILT & EXPLORED' | t }}</span><h2 id="projects-title">{{ 'A few things I\'ve worked on.' | t }}</h2></div></div>
-        <p class="section-intro">{{ 'Een overzichtje van waar ik mijzelf onder meer mee bezig heb gehouden:' | t }}</p>
+        <p class="section-intro">{{ 'A quick overview of what I\'ve been working on.' | t }}</p>
         <app-project-grid />
         <app-engineering-notes />
       </section>

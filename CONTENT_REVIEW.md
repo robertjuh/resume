@@ -16,12 +16,14 @@ Owner/developer document. Excluded from the static output.
 - Skills distinguish professional experience, personal projects/tooling and exploring next. Unclear attributions are omitted.
 - No invented architecture, providers, features, dates, metrics, repositories or outcomes.
 - Company background is labelled separately from personal contributions.
+- About includes the owner's confirmed development principles: LLM limits, human responsibility, realistic customer decisions and exploring enjoyable AI games. The exact supplied engineering quote stays in English, without an author attribution.
+- WDD/Fresh-IQ project details now include the owner's confirmed generic Angular table component for CRUD/custom modules, contribution to a new NestJS backend replacing vanilla JavaScript, and collaboration with data scientists on APIs and frontend presentation. Existing Bex imagery is retained; further code/screenshots are unavailable after the bankruptcy. This archival explanation stays private.
 - Abstract covers do not represent product screenshots.
 - No live inference, chatbot, simulated AI responses or contact backend.
 
 ## Review / assets to supply
 
-1. WDD: personally delivered features, Angular/NestJS responsibilities, specific services, technical challenges/decisions and evidenced outcomes.
+1. WDD: the reusable table component, NestJS backend contribution and data-scientist collaboration are confirmed. Any additional service details, design decisions or measured outcomes still need owner confirmation; do not request unavailable code or screenshots.
 2. Colijn: own screens/components, challenges and exact order-signature platform/technology/role details.
 3. VHBP: ongoing status or end date.
 4. Correct ROC dates and reconcile Colijn internship duration.

@@ -15,20 +15,26 @@ export const projects: readonly Project[] = [
   },
   {
     id: 'fresh-iq-wdd', number: '05', title: 'Fresh-IQ / WDD - Business Applications', category: 'Professional', label: 'Professional experience',
-    description: 'Business applications for the fresh-produce sector, combining Angular frontend development with Node.js and NestJS backend work. My Bex work included graph and table components.',
+    description: 'Built a reusable Angular table component for CRUD screens and custom modules. Helped set up a new NestJS backend and bring data-science output to APIs and the frontend.',
     overview: [
-      'At Fresh-IQ / WDD, I developed business applications for the fresh-produce sector, working with Angular and TypeScript on the frontend and Node.js and NestJS on the backend.',
+      'At Fresh-IQ / WDD, I helped developing the ERP system: BEX for the fresh-produce sector, working with Angular and TypeScript on the frontend and Node.js and NestJS on the backend.',
       'The work included inventory-forecasting and market-data applications, with Google Cloud in the project stack.',
-      'The screenshot shows Bex, an Angular business dashboard. I worked on its graph and table components to present business figures in charts and tables.'
+      'Bex, the Angular business dashboard shown below, is one example of my frontend work.'
     ],
     technologies: ['Angular', 'TypeScript', 'JavaScript', 'Node.js', 'NestJS', 'Google Cloud'],
     relatedExperience: ['wdd'],
+    role: 'Fullstack development at Fresh-IQ / WDD: reusable Angular components, contributing to a new NestJS backend and collaborating with data scientists.',
     screenshots: [{
       src: 'assets/projects/bex-angular-dashboard.png',
       alt: 'Bex Angular dashboard showing revenue, gross profit and volume graphs above financial results and customer tables.',
       caption: 'Bex at Fresh-IQ / WDD: I worked on the Angular graph and table components.'
     }],
-    technicalDetails: []
+    technicalDetails: [
+      'Designed and built a generic Angular table component to support different CRUD screens and custom modules.',
+      'Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend.',
+      'Worked with data scientists to make their data retrievable through APIs and present it in the frontend.',
+      'Developed graph and table components for Bex, the Angular business dashboard shown below.'
+    ]
   },
   {
     id: 'ai-campaign', number: '01', title: 'AI Campaign App', category: 'Personal', label: 'Interactive walkthrough',
@@ -69,7 +75,7 @@ export const projects: readonly Project[] = [
     screenshots: [{
       src: 'assets/projects/market-dashboard.png',
       alt: 'Market dashboard showing gold and silver prices, inflation figures, US labour-market indicators and financial news filters.',
-      caption: 'Not perticularly an aesthetic masterpiece, it\'s about the experience.'
+      caption: 'Built to learn: API integrations, data storage and a working dashboard.'
     }],
     role: 'Independent development, from backend and API integration to database management and frontend design.',
     technicalDetails: [
