@@ -1,0 +1,16 @@
+import { chromium, devices } from '@playwright/test';
+import { mkdir } from 'node:fs/promises';
+await mkdir('test-results/previews', { recursive: true });
+const browser = await chromium.launch();
+const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 });
+await desktop.goto('http://127.0.0.1:4173/resume/');
+await desktop.screenshot({ path: 'test-results/previews/desktop.png', fullPage: true });
+await desktop.getByRole('button', { name: /(?:Bekijk|Explore) AI Campaign App/ }).click();
+await desktop.screenshot({ path: 'test-results/previews/project-dialog.png' });
+await desktop.keyboard.press('Escape');
+await desktop.pdf({ path: 'test-results/previews/robert-walhout-cv.pdf', format: 'A4', printBackground: false });
+const mobile = await browser.newPage({ ...devices['iPhone 13'] });
+await mobile.goto('http://127.0.0.1:4173/resume/');
+await mobile.screenshot({ path: 'test-results/previews/mobile.png', fullPage: true });
+await browser.close();
+console.log('Captured desktop, mobile, project dialog and A4 resume in test-results/previews/.');

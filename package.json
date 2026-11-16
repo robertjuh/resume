@@ -1,0 +1,34 @@
+{
+  "name": "robert-walhout-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ng serve --host 0.0.0.0",
+    "build": "npm run build:resume",
+    "build:resume": "ng build --configuration production --base-href /resume/",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "test": "playwright test",
+    "verify:build": "node scripts/verify-build.mjs",
+    "preview": "node scripts/preview.mjs",
+    "generate:cv": "npm run build:resume && node scripts/generate-cv.mjs"
+  },
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "dependencies": {
+    "@angular/common": "22.2.5",
+    "@angular/compiler": "22.2.5",
+    "@angular/core": "22.2.5",
+    "@angular/platform-browser": "22.2.5",
+    "rxjs": "~7.8.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@angular/build": "22.2.6",
+    "@angular/cli": "22.2.6",
+    "@angular/compiler-cli": "22.2.5",
+    "@playwright/test": "^1.56.0",
+    "@axe-core/playwright": "^4.11.0",
+    "typescript": "~6.0.0"
+  }
+}

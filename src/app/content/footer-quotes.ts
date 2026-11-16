@@ -1,0 +1,18 @@
+export const footerQuotes = [
+  "Slopped with Codex, backed by real human experience.",
+  "Built with Codex. Debugged by a human.",
+  "organic experience. AI-generated website.",
+  "Proudly vibe-slopped with Codex.",
+  "Handcrafted by a machine, supervised by a questionable human.",
+  "I used to write all my own code. Anyway, here's my portfolio app.",
+  "Written by Codex. Blame the architecture on me.",
+  "Built with Codex. No humans were replaced, just mildly inconvenienced.",
+  "Yes, I can center a div.",
+  "Seven years learning to code. Now I supervise autocomplete.",
+  "Human experience, machine-generated divs.",
+  "Ethically sourced experience. Questionably sourced CSS.",
+  "Vibed into existence.",
+  "The code is AI-assisted. The technical debt is artisanal.",
+  "This portfolio/resume runs purely on vibes",
+  "Built with Codex because apparently I value my free time.",
+] as const;
