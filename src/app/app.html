@@ -8,7 +8,6 @@
   <aside id="sidebar" class="sidebar" [class.is-open]="mobileOpen()">
     <div class="sidebar-content">
     <div class="sidebar-profile"><div class="avatar"><img [src]="portraits.avatar.src" [width]="portraits.avatar.width" [height]="portraits.avatar.height" alt=""></div><span class="sidebar-name">Robert Walhout</span><span class="sidebar-role">{{ 'Fullstack Developer' | t }}</span></div>
-    <span class="nav-label mono">{{ 'EXPLORE' | t }}</span>
     <nav [attr.aria-label]="'Main navigation' | t">
       @for (section of sections; track section.id) {
         <a [href]="'#' + section.id" [class.active]="activeSection() === section.id" [attr.aria-current]="activeSection() === section.id ? 'location' : null" (click)="navigate(section.id)"><app-icon [name]="section.icon" /><span>{{ (section.label) | t }}</span>@if (activeSection() === section.id) { <span class="nav-active-dot"></span> }</a>
