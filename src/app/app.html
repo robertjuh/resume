@@ -23,7 +23,6 @@
       <!-- <span class="breadcrumb"><span class="muted">Portfolio</span><span>/</span><span>{{ currentSection() | t }}</span></span> -->
       <div class="topbar-actions">
         <app-language-select />
-        <!-- <a class="download-button" [href]="cvUrl()" [download]="cvFilename()"><app-icon name="download" /> {{ 'Download CV' | t }}</a> -->
         <button id="navigation-toggle" type="button" class="icon-button" [attr.aria-label]="(mobileOpen() ? 'Close navigation' : 'Open navigation') | t" [attr.aria-expanded]="mobileOpen()" aria-controls="sidebar" (click)="mobileOpen.set(!mobileOpen())"><app-icon [name]="mobileOpen() ? 'close' : 'menu'" /></button>
       </div>
     </div>
@@ -121,14 +120,13 @@
               </div>
             </div>
           }
-        </div><div class="language-list"><span class="eyebrow">{{ 'Languages' | t }}</span><div>@for (language of languages; track language.name) { <span>{{ (language.name) | t }} <small class="mono">{{ language.level }}</small></span> }</div></div></div><div class="education-card"><h3><app-icon name="briefcase" /> {{ 'Education & learning' | t }}</h3>@for (item of education; track item.title) { <div class="education-item"><span class="mono muted">{{ (item.period) | t }}</span><h4>{{ (item.title) | t }}</h4><p>{{ (item.institution) | t }}</p></div> }<div class="certifications"><span class="eyebrow">{{ 'Certifications · 2017' | t }}</span>@for (item of certifications; track item.title) { <p><app-icon name="check" />{{ (item.title) | t }}</p> }</div></div></div>
+        </div><div class="language-list"><span class="eyebrow">{{ 'Languages' | t }}</span><div>@for (language of languages; track language.name) { <span>{{ (language.name) | t }} <small class="mono">{{ language.level }}</small></span> }</div></div></div><div class="education-card"><h3><app-icon name="briefcase" /> {{ 'Education & learning' | t }}</h3>@for (item of education; track item.title) { <div class="education-item"><span class="mono muted">{{ (item.period) | t }}@if (item.completion) { <span class="education-completion" role="img" [attr.aria-label]="item.completion | t"><app-icon name="check" /></span> }</span><h4>{{ (item.title) | t }}</h4><p>{{ (item.institution) | t }}</p></div> }<div class="certifications"><span class="eyebrow">{{ 'Certifications · 2017' | t }}</span>@for (item of certifications; track item.title) { <p><app-icon name="check" />{{ (item.title) | t }}</p> }</div></div></div>
       </section>
       <section id="contact" class="section contact-section" tabindex="-1" aria-labelledby="contact-title">
-        <div><span class="eyebrow"> {{ 'START A CONVERSATION' | t }}</span><h2 id="contact-title">{{ 'Something interesting' | t }}<br>{{ 'in mind' | t }}<span class="name-period">?</span></h2><p>{{ (profile.opportunity) | t }}</p><a class="contact-email" [href]="links.email">{{ (profile.email) | t }} <app-icon name="external" /></a><div class="contact-links"><a [href]="links.github" target="_blank" rel="noopener noreferrer"><app-icon name="github" variant="social" /> GitHub <app-icon name="external" /></a><a [href]="links.linkedin" target="_blank" rel="noopener noreferrer"><app-icon name="linkedin" variant="social" /> LinkedIn <app-icon name="external" /></a></div></div><div class="contact-art" aria-hidden="true"><span>&lt;</span><span class="contact-slash">/</span><span>&gt;</span></div>
+        <div><span class="eyebrow"> {{ 'START A CONVERSATION' | t }}</span><h2 id="contact-title">{{ 'Something interesting' | t }}<br>{{ 'in mind' | t }}<span class="name-period">?</span></h2><p>{{ (profile.opportunity) | t }}</p><a class="contact-email" [href]="links.email">{{ (profile.email) | t }} </a><div class="contact-links"><a [href]="links.github" target="_blank" rel="noopener noreferrer"><app-icon name="github" variant="social" /> GitHub </a><a [href]="links.linkedin" target="_blank" rel="noopener noreferrer"><app-icon name="linkedin" variant="social" /> LinkedIn </a></div></div><div class="contact-art" aria-hidden="true"><span>&lt;</span><span class="contact-slash">/</span><span>&gt;</span></div>
       </section>
     </main>
     <footer class="site-footer"><span>Robert Walhout <span class="muted">· {{ profile.title | t }}</span></span><a href="#home" (click)="navigate('home')">{{ 'Back to top' | t }} ↑</a><app-footer-quotes class="footer-built mono" /></footer>
   </div>
 </div>
-<app-print-resume />
 

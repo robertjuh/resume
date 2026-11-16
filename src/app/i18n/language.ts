@@ -18,7 +18,7 @@ export class LanguageService {
     effect(() => {
       const language = this.language();
       document.documentElement.lang = language;
-      document.title = this.translate('Robert Walhout — Fullstack Software Developer');
+      document.title = this.translate('Robert Walhout -> Fullstack Software Developer');
       const description = 'Robert Walhout, fullstack software developer in Goes, Netherlands. Angular, TypeScript, Node.js and NestJS. Explore my experience and personal projects.';
       document.querySelector('meta[name="description"]')?.setAttribute('content', this.translate(description));
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);

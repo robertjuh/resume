@@ -1,5 +1,9 @@
 # Project: Interactive Developer Portfolio / Resume
 
+**Public-copy audit decisions, 16 November 2026:** Replace CV-reference/editorial placeholders with owner-confirmed experience. CI/CD is professional pipeline use/maintenance, including GitLab for BEX; n8n is a professional VHBP WordPress SEO workflow with SEO API integrations. Google Cloud experience at WDD/Fresh-IQ includes service accounts, Cloud SQL, BigQuery, Firestore, logging and SQL queries. Doctrine/Twig/Stimulus/Tailwind descriptions should state their confirmed dashboard uses. The AI Campaign App describes the owner-selected dndCampaignLLM repository: TypeScript/React/Fastify/SQLite/Zod, multiplayer, player actions, AI narration, server-sent events and saved campaigns. Retain a gallery ready for later real game-flow screenshots without public placeholder messages. Full decisions and provenance are recorded in CONTENT_REVIEW.md.
+
+**Latest owner decisions, 16 November 2026:** Remove CV downloads, public PDF files, the PDF generator and hidden print-CV view for privacy; this overrides earlier CV requirements in this brief. Use the owner's exact Dutch full-stack role preference from the content reference. Show the three confirmed WDD contributions in the work history. Describe Symfony positively as personal projects and three SymfonyCasts courses. VHBP is an ongoing, occasional collaboration for JavaScript/PHP WordPress template customization. Both qualifications are completed: HZ bachelor in Computer Software Engineering, 2012–2017; MBO ICT PDO, 2008–2011, as confirmed by the owner and LinkedIn screenshot. Keep private PDF copies outside the upload and block retired CV URLs in the app-scoped hosting configuration.
+
 Build a complete, polished, interactive personal portfolio and resume website for **Robert Walhout**, a fullstack software developer based in Goes, Netherlands.
 
 Implement the application, not just a proposal or mockup. Create the necessary Angular project files, components, styling, content models, configuration, and documentation.
@@ -314,10 +318,12 @@ Include this in the timeline, preferably as an earlier stage in my career.
 
 ### VHBP — Van Herk Business Promotions
 
-**October 2013 – Present (date requires confirmation)**  
-**Role:** Part-time Web Development / Customization
+**October 2013 – Present, ongoing occasional collaboration**<br>
+**Role:** WordPress Customization
 
-My resume describes part-time customization work for a website-building company.
+The owner confirmed the collaboration continues occasionally, with WordPress template customization using JavaScript and PHP. Describe the individual tasks only to the extent confirmed by the owner.
+
+The owner also confirmed that WP_Query, ACF/custom fields, taxonomies, content filtering and responsive CSS/layout fixes belong to this collaboration. Show these in four concise work-history bullets, with WordPress, PHP, JavaScript, CSS, ACF and WP_Query as technologies; keep PHP/WordPress skill descriptions aligned with this confirmed professional context.
 
 PHP is explicitly listed in connection with this work.
 
@@ -332,7 +338,7 @@ Source:
 
 Do not invent individual client projects or responsibilities.
 
-Include a TODO to confirm whether this engagement is still ongoing.
+The ongoing status is confirmed; do not imply continuous full-time or part-time employment.
 
 ### Earlier technical experience
 

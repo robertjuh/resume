@@ -54,6 +54,10 @@ Fullstack JavaScript/TypeScript developer with over seven years of professional 
 
 ### Role and location preferences
 
+**Current owner-supplied public wording, 16 November 2026:** “Op zoek naar een full-stack ontwikkelrol met TypeScript, Node.js of PHP. Mijn sterkste expertise ligt bij Angular, en ik sta open voor andere interessante frameworks.” English: “Looking for a full-stack development role with TypeScript, Node.js or PHP. My strongest expertise is in Angular, and I am open to other interesting frameworks.”
+
+**Current privacy preference:** CV downloads, public PDFs and the hidden print-CV view are removed. Retain private local copies outside public assets and block legacy CV URLs when deploying. This overrides earlier instructions to offer downloadable/printable CVs.
+
 - Interested in **frontend, backend, and fullstack webdevelopment** positions.
 - Preference for opportunities in **Goes and nearby Zeeland**, including **Zierikzee** and **Bergen op Zoom**.
 - Open to **hybrid or remote work**.
@@ -84,7 +88,7 @@ Worked on an ERP/business application for inventory forecasting and market data 
 - Built a generic Angular table component to support different CRUD screens and custom modules (owner confirmation, 16 November 2026).
 - Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend (owner confirmation, 16 November 2026).
 - Worked with data scientists to make their data retrievable through APIs and present it in the frontend (owner confirmation, 16 November 2026).
-- Worked on graph and table components for Bex, the Angular business dashboard already illustrated in the portfolio.
+- Worked on graph and table components for BEX, the Angular business dashboard already illustrated in the portfolio.
 
 **Stack confirmed by original resume:** Angular, JavaScript, TypeScript, Node.js, NestJS, Google Cloud, GitHub, GitLab.
 
@@ -142,19 +146,35 @@ Goes, Netherlands
 
 ### VHBP (Van Herk Business Promotions)
 
-**Part-time Web Development / Website Customization**  
-**October 2013 – Present**  
+**WordPress Customization — Occasional Collaboration**<br>
+**October 2013 – Present**<br>
 Remote
 
-- Carried out part-time customization work for a website-development business.
-- Used **PHP** as part of this work.
+**Public summary:** Since 2013, I have worked with Van Herk Business Promotions on occasional WordPress customization, from PHP templates and dynamic content to JavaScript behavior and responsive CSS.
+
+- Customize WordPress templates with PHP and ACF/custom fields for site-specific content.
+- Use WP_Query and taxonomies to retrieve, organize and filter WordPress content.
+- Customize frontend behavior within existing WordPress websites using JavaScript.
+- Resolve responsive CSS and layout issues across screen sizes.
+
+**Dutch summary:** Sinds 2013 werk ik af en toe samen met Van Herk Business Promotions aan WordPress-maatwerk: van PHP-templates en dynamische inhoud tot JavaScript-interactie en responsive CSS.
+
+**Dutch highlights:**
+
+- WordPress-templates aanpassen met PHP en ACF/custom fields voor websitespecifieke inhoud.
+- WP_Query en taxonomieën gebruiken om WordPress-inhoud op te halen, te ordenen en te filteren.
+- Frontendgedrag binnen bestaande WordPress-websites aanpassen met JavaScript.
+- Responsive CSS- en layoutproblemen oplossen voor verschillende schermformaten.
+
+**Technologies:** WordPress, PHP, JavaScript, CSS, ACF, WP_Query.
+
+**Owner confirmation, 16 November 2026:** All the queried tasks—WP_Query, ACF/custom fields, taxonomies, content filtering and responsive CSS/layout fixes—belong to the VHBP work. These may now be attributed to this collaboration. No additional client names, project metrics or project ownership are inferred.
 
 **About the employer:** VHBP creates and maintains business websites and provides related web design and online marketing services.
 
 **Link:** <https://www.vhbp.nl/>
 
-<!-- TODO(REVIEW): Confirm whether this work is still ongoing and whether 2013–present is the correct date range. -->
-<!-- TODO(REVIEW): Add specific responsibilities and technologies only if accurate. -->
+**Owner clarification, 16 November 2026:** The collaboration continues occasionally, without an end date. Work includes WordPress template customization using JavaScript and PHP. Show October 2013–present with an Occasional/Incidenteel label, without implying continuous full-time or part-time employment. Link WordPress to this confirmed professional context.
 
 ### Earlier IT experience
 
@@ -198,30 +218,27 @@ A Bitcoin-related index application I built independently before generative-AI c
 
 ### AI Campaign App
 
-**Personal project** · **AI-assisted RPG / campaign system**
+**Personal project** · **Locally hosted multiplayer RPG**
 
-A Dungeons & Dragons-like campaign application I have been developing for playing with friends. The project explores how an AI game master can support player-driven storytelling across different settings, while campaign and character information can carry over between sessions.
+The owner identified the local **dndCampaignLLM** repository as the source for this portfolio entry and confirmed working persistence between sessions. The separate dndCampaign Symfony prototype is not used as this entry's evidence.
 
-**Confirmed product concept and work discussed:**
+A Dungeons & Dragons-like application developed for playing with friends. Players create characters, join a campaign, submit free-text actions and follow an AI game master through a shared story screen and individual player views.
 
-- A campaign-based RPG with an **AI game-master concept** and **free-text player actions**.
-- Campaign setup fields have included **name, setting, premise, tone and custom instructions**.
-- The project is intended for **solo and multiplayer** use.
-- A persistent record of campaign and character state is a central design goal.
-- Campaigns have been created or tested in different genres, including fantasy, cyberpunk, science fiction, maritime settings and horror.
-- Discussion of game state has included **characters, locations, inventory, quests, NPCs and reputation**.
+**Verified stack:** TypeScript, React, Node.js, Fastify, SQLite and Zod.
 
-**Design requirements discussed, with implementation status not fully verified:**
+**Verified game flow:**
 
-- Character generation from short descriptions/keywords.
-- Balanced character attributes and a specified set of combat and non-combat abilities.
-- Session continuity, branching consequences and lightweight tabletop mechanics.
+1. Campaign setup with a name, setting, premise, tone, language and instructions.
+2. Character creation and joining through an invitation link, session code or QR code.
+3. Individual player actions collected into turns.
+4. AI narration alongside backend game rules and state changes.
+5. SQLite storage and resumption of campaign settings, characters, inventories, world state, turns and journals; stored world state includes locations, quests and NPCs.
 
-**Portfolio presentation:** Use screenshots, a structured walkthrough and architecture explanations supplied by Robert later. **Do not connect the portfolio demo to a live inference API.** Do not invent an implementation diagram, persistence model, game engine or synchronization method.
+**Technical focus:** Shared TypeScript/Zod schemas; a Node.js/Fastify API; live state updates via server-sent events; persistent SQLite campaign state.
 
-<!-- TODO(REVIEW): Confirm which of the above ideas are implemented today and which are roadmap items. -->
-<!-- TODO(REVIEW): Supply actual frontend/backend stack, database, LLM provider, project status and repository link. -->
-<!-- TODO(REVIEW): Supply screenshots of campaign creation, characters, story turns and any state-management views. -->
+**Screenshot plan:** The owner will add real images describing the entire flow later. Keep the existing screenshots array ready for setup, character creation/joining, actions, story and resumed campaigns, with descriptive captions. Do not publish “screenshots coming soon” panels or invented product images.
+
+**Evidence:** Read-only inspection of dndCampaignLLM/package.json and README.md, server/db.ts, server/game.ts snapshot/state persistence, server/app.ts campaign/action/event routes, and shared/schema.ts. Do not publish private campaign data, player details, credentials or repository contents. This evidence supports a personal project description, not professional React/AI expertise or a public production deployment. RAG remains the owner's separately stated learning interest.
 
 ### Economic Data Dashboard
 
@@ -251,7 +268,9 @@ A PHP/Symfony project for presenting market and economic indicators in a clearer
 
 A collection of professional experience developing ERP and business applications. The case studies can explain the types of workflows, interfaces and backend services involved in business software, with specific examples added after review.
 
-**Fresh-IQ / WDD case study — owner clarification, 16 November 2026:** The project card highlights the reusable Angular table component for CRUD screens and custom modules, contribution to setting up the replacement NestJS backend, and collaboration with data scientists on API access and frontend presentation. The detail view includes an explicit role and four technical focus paragraphs, with the existing Bex screenshot retained. The backend contribution is described as helping to set it up, without claiming sole ownership. Do not invent performance metrics, undocumented architecture or a repository.
+**Fresh-IQ / WDD case study — owner clarification, 16 November 2026:** The project card highlights the reusable Angular table component for CRUD screens and custom modules, contribution to setting up the replacement NestJS backend, and collaboration with data scientists on API access and frontend presentation. The detail view uses two context paragraphs followed by three titled technical-contribution bullets: Reusable Angular components, NestJS backend, and Data-science collaboration. The redundant My role/Mijn rol block is omitted for this project. The existing BEX screenshot and caption retain the graph/table contribution. The backend contribution is described as helping to set it up, without claiming sole ownership. Do not invent performance metrics, undocumented architecture or a repository.
+
+**Case-study opening:** “At Fresh-IQ / WDD, I helped develop BEX, an ERP system for the fresh-produce sector, using Angular and TypeScript on the frontend and Node.js/NestJS on the backend.” Dutch: “Bij Fresh-IQ / WDD werkte ik mee aan BEX, een ERP-pakket voor de AGF-sector, met Angular en TypeScript voor de frontend en Node.js/NestJS voor de backend.” Use BEX consistently in visible copy, screenshot captions and alt text.
 
 **Economic dashboard screenshot caption:** “Built to learn: API integrations, data storage and a working dashboard.” Dutch: “Gebouwd om te leren: API-koppelingen, gegevensopslag en een werkend dashboard.”
 
@@ -302,7 +321,7 @@ Evidence from earlier technical discussions includes work with or investigation 
 - **Data / backend services:** Firestore, BigQuery, MySQL, Memcached, Firebase Admin, REST APIs.
 - **PHP ecosystem:** PHP, WordPress customization, Symfony, Doctrine ORM, Twig, Stimulus, AssetMapper, Tailwind CSS.
 - **Other web stack:** React, Next.js, Prisma, Supabase/PostgreSQL.
-- **Automation / workflow:** CI/CD concepts and pipelines, n8n.
+- **Automation / workflow:** Used and maintained CI/CD pipelines across applications, including GitLab pipelines for BEX at WDD/Fresh-IQ. Used n8n for a WordPress SEO workflow and integrations with several SEO APIs at VHBP. Both contexts were confirmed by the owner during the public-copy audit.
 - **AI development tools (hands-on experimentation):** Claude Code, OpenAI Codex, Cursor.
 - **AI engineering (exploring next):** RAG, LLM integration, agents/tool use, output evaluation and reliable LLM applications. RAG is a confirmed learning interest; no expertise or implementation is claimed.
 
@@ -317,7 +336,7 @@ My tooling interests include debugging, code generation, refactoring, exploring 
 **Public explorer categories:**
 
 1. **Professional experience:** Verified workplace technologies and role/project links.
-2. **Personal projects & tooling:** Independent development, courses and hands-on tooling; this category does not imply employer attribution. WordPress remains unlinked until its client context is confirmed.
+2. **Personal projects & tooling:** Independent development, courses and hands-on tooling; this category does not imply employer attribution. WordPress is now linked to the owner's confirmed VHBP collaboration under Professional experience.
 3. **Frameworks & software design - confirmed owner update, 12 November 2026:** Angular is actual professional experience. React, Laravel, Vue and software design patterns are learning interests; continued Symfony learning builds on personal projects and three SymfonyCasts courses.
 
 **Exploring next:** Concepts and technologies of interest, without proficiency levels, professional attribution or claims of implementation.
@@ -338,24 +357,28 @@ No professional AI implementation experience or specific productivity improvemen
 
 ### Symfony learning
 
+**Public wording:** “Hands-on experience through personal projects and three SymfonyCasts courses. I am interested in learning more about Symfony.” Dutch: “Praktijkervaring via eigen projecten en drie SymfonyCasts-cursussen. Ik wil me verder verdiepen in Symfony.”
+
 Completed **three SymfonyCasts courses** and has been working on personal Symfony/PHP projects. **No professional workplace experience with Symfony has been claimed.** Present this clearly and positively, without implying a commercial Symfony employment history.
 
 <!-- TODO(REVIEW): Add the names and completion dates of the three SymfonyCasts courses, if useful. -->
-<!-- TODO(REVIEW): Confirm any formal PHP/WordPress professional work beyond the VHBP customization already listed. -->
+<!-- TODO(REVIEW): Additional PHP/WordPress claims beyond the confirmed VHBP JavaScript/PHP template customization still need owner confirmation. -->
 
 ---
 
 ## 5. Education
 
-**HBO-ICT**  
-University of Applied Sciences, Vlissingen  
-**2012–2018**
+**Bachelor — Computer Software Engineering**<br>
+HZ University of Applied Sciences<br>
+**2012–2017** · **Degree obtained**
 
-**MBO 4-ICT — Private Digital Researcher**  
+**MBO 4-ICT — Private Digital Researcher (PDO)**<br>
 ROC Zeeland ICT, Vlissingen  
-**2007–2011**
+**2008–2011** · **Diploma obtained**
 
-<!-- TODO(REVIEW): Confirm the institution's official current/historical English name and whether each program was formally completed. Do not assert a degree was awarded solely from these attendance dates. -->
+The owner confirmed both qualifications were completed and supplied a LinkedIn education screenshot on 16 November 2026. These dates and the HZ institution/degree wording supersede the original CV. No BSc abbreviation, honours or other distinctions are inferred.
+
+Display completion as a checkmark immediately after each qualification's year range, with the localized completion status retained as an accessible label. Do not show a separate “Diploma behaald” line.
 
 ## 6. Certifications and courses
 
@@ -499,7 +522,7 @@ The following topics have been discussed in detail in earlier coding conversatio
 
 **Editorial caution:** Real project implementation discussions are evidence of familiarity, not automatically evidence of deployment to production, personal ownership of a whole subsystem, or permission to reveal client specifics.
 
-**Private archival limit, owner clarification on 16 November 2026:** Further code and screenshots from the WDD/Fresh-IQ work are unavailable after the bankruptcy. Use the owner's confirmed recollections and the existing Bex screenshot; do not request replacement source material or publish the archival explanation as part of the case study. The reusable table component, contribution to the replacement NestJS backend and data-scientist collaboration are now confirmed; attribution of the additional tools below remains unconfirmed.
+**Private archival limit, owner clarification on 16 November 2026:** Further code and screenshots from the WDD/Fresh-IQ work are unavailable after the bankruptcy. Use the owner's confirmed recollections and the existing BEX screenshot; do not request replacement source material or publish the archival explanation as part of the case study. The reusable table component, contribution to the replacement NestJS backend and data-scientist collaboration are now confirmed; attribution of the additional tools below remains unconfirmed.
 
 ## 3a. Additional experience supplied on 10 November 2026 - review before public attribution
 
@@ -509,11 +532,11 @@ The owner supplied an expansion brief based on prior development discussions. It
 |---|---|---|
 | Data-heavy Angular applications | Component coordination, PrimeNG tables, dynamic filters, comparison modes, configurable views, RxJS, charts/zoom and structured datasets | Which tasks were personally implemented, at which employer, and which examples may be shared? No performance/accessibility claims without evidence. |
 | Frontend filters to backend data | Node/NestJS services, REST, request validation, optional/null/array parameters, parameterized BigQuery SQL, response mapping and error handling | Confirm employer/project and personal contribution. A future request-lifecycle diagram must be explicitly illustrative, not a production architecture diagram. |
-| Cloud/data services | Google Cloud, BigQuery, Firestore, Firebase Admin, MySQL and Memcached | Google Cloud workplace context is verified; confirm the other services' contexts. Do not imply infrastructure ownership. |
+| Cloud/data services | Google Cloud service accounts, Cloud SQL, BigQuery, Firestore, logging and SQL queries | Confirmed by the owner at WDD/Fresh-IQ. Firebase Admin, MySQL and Memcached attribution remains pending. Do not imply infrastructure ownership. |
 | Role-aware enterprise applications | Firebase authentication, JWT claims, permissions, conditional Angular navigation and backend authorization | Distinguish code worked on from topics discussed. Confirm contribution and disclosure permission; never include private roles/claims/configuration. |
-| PHP/WordPress work | WP_Query, ACF, taxonomies, filtering, DOM changes, theme customization, responsive pricing CSS and layout debugging | Confirm which work belongs to VHBP or another engagement before updating its timeline or adding WordPress employment links. |
+| PHP/WordPress work | PHP templates, WP_Query, ACF/custom fields, taxonomies, content filtering, JavaScript frontend behavior and responsive CSS/layout fixes | Confirmed by the owner on 16 November 2026 as VHBP work. No client identities, ownership of entire websites or measured outcomes are asserted. |
 | Economic dashboard | Controllers/services/DTOs, Doctrine, Twig, Stimulus, external APIs and price snapshots; CSRF/JSON refreshes, labor-market data and economic indicators discussed | General learning topics may be shown; confirm which specific features work now. No completed CPI/news/refresh workflow claims yet. |
-| AI Campaign App | Campaign setup, player actions, character/world context, AI-game-master concept and continuity | Existing concept walkthrough stays; confirm implemented character generation, persistence and multiplayer before adding feature claims. |
+| AI Campaign App | The owner-selected dndCampaignLLM project: TypeScript/React/Fastify/SQLite/Zod, multiplayer, character creation, saved campaigns and server-sent events | Owner confirmed session persistence; code review verified storage and API paths. Public game-flow screenshots are planned, not yet supplied. |
 | Daily AI Coach | Next.js/React/TypeScript, Prisma, Supabase/PostgreSQL and AI SDK; goals/planning/reflection | Remains private pending publication approval and verification. Do not expose goals, journals or user data. |
 | Bitcoin Index | Independent project predating widespread AI assistants | Retain supplied history; await actual stack, purpose, dates, screenshots and repository. |
 
@@ -547,8 +570,8 @@ The application has a typed, initially empty notes collection. Add owner-authore
 6. **Symfony project:** What works now, repository link, screenshots, and whether deployment exists.
 7. **Other personal projects:** Whether Daily AI Coach and Leadsparker should appear in the public project grid.
 8. **Education:** Exact awarded qualifications vs attended programs; institution names.
-9. **Dates:** Fix the reversed ROC internship dates, reconcile Colijn internship duration, and confirm VHBP ongoing status.
-10. **Skills:** Confirm work vs personal experience for BigQuery, Firestore, Firebase, MySQL, Memcached, React/Next.js, Prisma/Supabase, CI/CD and n8n.
+9. **Dates:** Fix the reversed ROC internship dates and reconcile Colijn internship duration. VHBP's ongoing occasional status is confirmed.
+10. **Skills:** BigQuery, Firestore, Cloud SQL, service accounts, logging, SQL queries and GitLab CI/CD are confirmed at WDD/Fresh-IQ; n8n/SEO APIs are confirmed at VHBP. Firebase Admin, MySQL, Memcached, Next.js and Prisma/Supabase context remains pending. React is verified in the personal AI game, without a workplace expertise claim.
 11. **Evidence of impact:** Add outcomes where there is actual evidence, such as users served, reduced manual work, improved loading times, increased reliability or successful production launches. Never create estimates just to make the resume sound better.
 12. **Privacy:** Decide whether to publish phone, birth year, certificate registration number and any work/client screenshots.
 

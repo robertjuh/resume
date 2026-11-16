@@ -17,41 +17,47 @@ export const projects: readonly Project[] = [
     id: 'fresh-iq-wdd', number: '05', title: 'Fresh-IQ / WDD - Business Applications', category: 'Professional', label: 'Professional experience',
     description: 'Built a reusable Angular table component for CRUD screens and custom modules. Helped set up a new NestJS backend and bring data-science output to APIs and the frontend.',
     overview: [
-      'At Fresh-IQ / WDD, I helped developing the ERP system: BEX for the fresh-produce sector, working with Angular and TypeScript on the frontend and Node.js and NestJS on the backend.',
-      'The work included inventory-forecasting and market-data applications, with Google Cloud in the project stack.',
-      'Bex, the Angular business dashboard shown below, is one example of my frontend work.'
+      'At Fresh-IQ / WDD, I helped develop BEX, an ERP system for the fresh-produce sector, using Angular and TypeScript on the frontend and Node.js/NestJS on the backend.',
+      'The work included inventory-forecasting and market-data applications, with Google Cloud in the project stack.'
     ],
     technologies: ['Angular', 'TypeScript', 'JavaScript', 'Node.js', 'NestJS', 'Google Cloud'],
     relatedExperience: ['wdd'],
-    role: 'Fullstack development at Fresh-IQ / WDD: reusable Angular components, contributing to a new NestJS backend and collaborating with data scientists.',
     screenshots: [{
       src: 'assets/projects/bex-angular-dashboard.png',
-      alt: 'Bex Angular dashboard showing revenue, gross profit and volume graphs above financial results and customer tables.',
-      caption: 'Bex at Fresh-IQ / WDD: I worked on the Angular graph and table components.'
+      alt: 'BEX Angular dashboard showing revenue, gross profit and volume graphs above financial results and customer tables.',
+      caption: 'BEX at Fresh-IQ / WDD: I worked on the Angular graph and table components.'
     }],
-    technicalDetails: [
-      'Designed and built a generic Angular table component to support different CRUD screens and custom modules.',
-      'Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend.',
-      'Worked with data scientists to make their data retrievable through APIs and present it in the frontend.',
-      'Developed graph and table components for Bex, the Angular business dashboard shown below.'
+    technicalDetails: [],
+    contributions: [
+      { title: 'Reusable Angular components', description: 'Designed and built a generic Angular table component to support different CRUD screens and custom modules.' },
+      { title: 'NestJS backend', description: 'Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend.' },
+      { title: 'Data-science collaboration', description: 'Worked with data scientists to make their data retrievable through APIs and present it in the frontend.' }
     ]
   },
   {
     id: 'ai-campaign', number: '01', title: 'AI Campaign App', category: 'Personal', label: 'Interactive walkthrough',
-    description: 'An AI-assisted RPG campaign project exploring player-driven storytelling, different worlds and an AI game master.',
+    description: 'A locally hosted multiplayer RPG with an AI game master, a shared story screen, individual player actions and persistent campaigns.',
     overview: [
       'A Dungeons & Dragons-like campaign application I have been developing for playing with friends.',
-      'The project explores an AI game master, free-text player actions and configurable campaign settings. Campaigns have been created or tested in fantasy, cyberpunk, science-fiction and horror settings.',
-      'The walkthrough below explains the product concept. It does not run AI or simulate responses from the application.'
+      'Players create characters, join a campaign and submit free-text actions. An AI game master narrates the story while the backend manages game rules and saved state.',
+      'Campaigns can be resumed between sessions, with character progress, inventory, world state and turn history stored in SQLite.'
     ],
-    technologies: [], relatedExperience: [], screenshots: [], technicalDetails: [],
+    technologies: ['TypeScript', 'React', 'Node.js', 'Fastify', 'SQLite', 'Zod'],
+    relatedExperience: [],
+    // Add real screenshots in flow order: setup, character creation/joining, player actions, story, resumed campaign.
+    screenshots: [],
+    technicalDetails: [
+      'React frontend with shared TypeScript and Zod schemas for campaign, character and action data.',
+      'Node.js/Fastify API for campaign creation, joining, player actions and live updates through server-sent events.',
+      'SQLite persists campaign state, character data, turns and journals so sessions can be resumed.'
+    ],
     walkthrough: [
       { title: 'Campaign setup', description: 'A campaign begins with its own setting, premise and tone. These choices shape the kind of story the group wants to explore.', items: ['Campaign name and setting', 'Premise and tone', 'Custom instructions'] },
-      { title: 'Player actions', description: 'The concept uses free-text player actions, giving players room to describe what they want their character to do.', items: ['Player-driven decisions', 'Solo and multiplayer concept', 'Actions within the campaign setting'] },
-      { title: 'AI game master', description: 'An AI game master is the central narration concept: responding to player choices within the campaign world.', items: ['AI-assisted narration concept', 'Campaign settings influence the story', 'Different genres and themes'] },
-      { title: 'Campaign context', description: 'Keeping campaign and character information between sessions is a design goal. The exact implementation is not described here.', items: ['Characters and locations', 'Inventory, quests and NPCs', 'Continuity as a design goal'] }
+      { title: 'Characters & joining', description: 'Players create a character from a template or a generated concept and join a campaign using an invitation link, session code or QR code.', items: ['Character creation', 'Invite links and session codes', 'Shared story screen and individual player views'] },
+      { title: 'Player actions', description: 'Players submit free-text actions through their own view. The application gathers these actions into turns for the AI game master and game engine to resolve.', items: ['Free-text player actions', 'Individual player chats', 'Turn-based play'] },
+      { title: 'AI game master', description: 'The AI game master narrates scenes and reacts to player actions. Backend rules handle game state, dice rolls, resources and inventory updates.', items: ['AI narration', 'Backend game rules', 'Shared campaign story'] },
+      { title: 'Campaign context', description: 'Campaign settings, characters, inventories, locations, quests, NPCs and turn history are stored in SQLite. Returning players can resume a saved campaign.', items: ['Saved characters and inventory', 'Locations, quests and NPCs', 'Resume a saved campaign'] }
     ]
-    // TODO(REVIEW): Confirm delivered features, stack, state handling and screenshots.
   },
   {
     id: 'bitcoin-index', number: '02', title: 'Bitcoin Index', category: 'Personal', label: 'Independent project',

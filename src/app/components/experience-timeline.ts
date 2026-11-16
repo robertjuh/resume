@@ -13,7 +13,7 @@ import { Icon } from './icon';
           <span class="timeline-dot" [class.first]="first"></span>
           <div class="timeline-date mono">{{ (job.period) | t }}<span>{{ (job.location) | t }}</span></div>
           <div class="experience-body">
-            <div class="job-heading"><h3>{{ (job.company) | t }}</h3><span class="role-type">{{ (job.id === 'vhbp' ? 'Part-time' : job.id === 'colijn-intern' ? 'Internship' : 'Professional') | t }}</span></div>
+            <div class="job-heading"><h3>{{ (job.company) | t }}</h3><span class="role-type">{{ (job.id === 'vhbp' ? 'Occasional' : job.id === 'colijn-intern' ? 'Internship' : 'Professional') | t }}</span></div>
             <p class="job-role">{{ (job.role) | t }}</p>
             <p class="muted">{{ (job.summary) | t }}</p>
             <div class="tags">@for (tech of job.technologies; track tech) { <span>{{ (tech) | t }}</span> }</div>

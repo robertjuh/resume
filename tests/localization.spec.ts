@@ -30,25 +30,18 @@ test('language dropdown switches all content and preserves the chosen language a
   await page.getByRole('menuitemradio', { name: 'Nederlands', exact: true }).click();
   await expect(page.getByRole('heading', { name: 'Mijn werkervaring:' })).toBeVisible();
   await expect(page.locator('#about')).toContainText('Talen');
-  await expect(page.locator('#contact')).toContainText('hybride of op afstand');
+  await expect(page.locator('#contact')).toContainText('Op zoek naar een full-stack ontwikkelrol met TypeScript, Node.js of PHP.');
   expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
 });
 
-test('each language serves a real PDF CV from the deployment subpath', async ({ page }) => {
+test('CV downloads and hidden print-CV content are unavailable in both languages', async ({ page }) => {
   await page.goto('./');
-  for (const [language, code] of [['nl', 'NL'], ['en', 'EN']] as const) {
+  for (const language of ['nl', 'en'] as const) {
     await page.locator('app-language-select > button').click();
     await page.getByRole('menuitemradio', { name: language === 'nl' ? 'Nederlands' : 'English', exact: true }).click();
-    await page.emulateMedia({ media: 'print' });
-    await expect(page.locator('.print-resume')).toContainText(code === 'NL' ? 'Profiel' : 'Profile');
-    await expect(page.locator('.print-resume')).toContainText(code === 'NL' ? 'Goes, Zeeland, Nederland' : 'Goes, Zeeland, Netherlands');
-    await page.emulateMedia({ media: 'screen' });
+    await expect(page.locator('app-print-resume, .print-resume, a[href$=".pdf"]')).toHaveCount(0);
     const response = await page.request.get('cv/robert-walhout-' + language + '.pdf');
-    expect(response.ok()).toBe(true);
-    expect(response.headers()['content-type']).toBe('application/pdf');
-    const bytes = await response.body();
-    expect(bytes.subarray(0, 5).toString()).toBe('%PDF-');
-    expect(bytes.length).toBeGreaterThan(10000);
+    expect(response.status()).toBe(404);
   }
 });
 

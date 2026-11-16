@@ -42,7 +42,7 @@ test('timeline and technology relationships reveal verified context', async ({ p
   await expect(page.locator('.skill-context')).not.toContainText('WDD');
 });
 
-test('navigation, print resume and responsive layout are usable', async ({ page, isMobile }) => {
+test('navigation and responsive layout remain usable without a hidden print CV', async ({ page, isMobile }) => {
   await page.goto('./');
   if (isMobile) {
     await page.getByRole('button', { name: 'Open navigation' }).click();
@@ -51,9 +51,8 @@ test('navigation, print resume and responsive layout are usable', async ({ page,
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.emulateMedia({ media: 'print' });
-  await expect(page.locator('.print-resume')).toBeVisible();
-  await expect(page.locator('.print-resume')).toContainText('MBO 4-ICT — Private Digital Researcher');
-  await expect(page.locator('.site-shell')).not.toBeVisible();
+  await expect(page.locator('app-print-resume, .print-resume')).toHaveCount(0);
+  await expect(page.locator('.site-shell')).toBeVisible();
 });
 
 test('page and project dialog pass automated accessibility checks', async ({ page }) => {

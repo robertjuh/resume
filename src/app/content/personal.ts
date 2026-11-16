@@ -1,8 +1,8 @@
 import { Education, Interest } from '../models/content';
 export const education: readonly Education[] = [
-  { title: 'Symfony; DTO\s, datastructures, Twig, PHP', institution: 'SymfonyCasts', period: '2026' },
-  { title: 'HBO-ICT', institution: 'University of Applied Sciences, Vlissingen', period: '2012 — 2018' },
-  { title: 'MBO 4-ICT — Private Digital Researcher', institution: 'ROC Zeeland ICT, Vlissingen', period: '2007 — 2011' }
+  { title: 'Symfony courses; PHP, Twig, DTOs and data structures', institution: 'SymfonyCasts', period: '2026' },
+  { title: 'Bachelor; Computer Software Engineering', institution: 'HZ University of Applied Sciences', period: '2012 — 2017', completion: 'Degree obtained' },
+  { title: 'MBO 4-ICT; Private Digital Researcher (PDO)', institution: 'ROC Zeeland ICT, Vlissingen', period: '2008 — 2011', completion: 'Diploma obtained' }
 ];
 export const certifications = [
   { title: 'Cisco Exploration', year: '2017' },

@@ -1,0 +1,7 @@
+# Match the UTF-8 build instead of the host's Windows-1252 default.
+# This file is deployed inside /resume/ and applies only to this app.
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html
+
+# Retire CV downloads, including files left on the host by older uploads.
+RedirectMatch 404 "^/resume/cv(?:/|$)"

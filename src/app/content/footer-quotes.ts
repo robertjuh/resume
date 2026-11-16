@@ -8,6 +8,7 @@ export const footerQuotes = [
   "Written by Codex. Blame the architecture on me.",
   "Built with Codex. No humans were replaced, just mildly inconvenienced.",
   "Yes, I can center a div.",
+  "Not your ordinary vibeslop",
   "Seven years learning to code. Now I supervise autocomplete.",
   "Human experience, machine-generated divs.",
   "Ethically sourced experience. Questionably sourced CSS.",

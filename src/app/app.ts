@@ -10,13 +10,12 @@ import { ProjectGrid } from './components/project-grid';
 import { EngineeringNotes } from './components/engineering-notes';
 import { SkillExplorer } from './components/skill-explorer';
 import { CoreCompetencies } from './components/core-competencies';
-import { PrintResume } from './components/print-resume';
 import { FooterQuotes } from './components/footer-quotes';
 import { LanguageSelect } from './components/language-select';
 
 @Component({
   selector: 'app-root',
-  imports: [Translate, Icon, ExperienceTimeline, ProjectGrid, EngineeringNotes, SkillExplorer, CoreCompetencies, PrintResume, FooterQuotes, LanguageSelect],
+  imports: [Translate, Icon, ExperienceTimeline, ProjectGrid, EngineeringNotes, SkillExplorer, CoreCompetencies, FooterQuotes, LanguageSelect],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
   host: { '(document:keydown.escape)': 'closeNavigation()' }
@@ -24,8 +23,6 @@ import { LanguageSelect } from './components/language-select';
 export class App implements AfterViewInit {
   protected readonly locale = inject(LanguageService);
   protected readonly currentSection = computed(() => sections.find(section => section.id === this.activeSection())?.label ?? 'Overview');
-  // protected readonly cvUrl = computed(() => 'cv/robert-walhout-' + this.locale.language() + '.pdf');
-  protected readonly cvFilename = computed(() => 'Robert-Walhout-CV-' + this.locale.language().toUpperCase() + '.pdf');
   protected readonly profile = profile;
   protected readonly portraits = portraits;
   protected readonly links = links;

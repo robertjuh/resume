@@ -12,7 +12,7 @@ export const profile = {
   focus: 'Most of my work has been in Angular, TypeScript, Node.js and NestJS, particularly on ERP systems and data-heavy business software.',
   summary: 'Fullstack JavaScript/TypeScript developer with over seven years of professional experience in enterprise web applications. Worked on ERP systems for the fresh-produce and home-furnishing industries, using Angular for frontend development and Node.js/NestJS for backend services. Familiar with complex business workflows, data-oriented interfaces, APIs, and working in established development teams.',
   about: "I enjoy projects where there's an interesting system to figure out, whether that's business software, a small market-data tool, or a game I want to play with friends. Outside programming, I make electronic music, play games, and spend time on psychology, philosophy and language learning.",
-  opportunity: 'Interested in frontend, backend and fullstack roles in Zeeland, with hybrid or remote work.',
+  opportunity: 'Looking for a full-stack development role with TypeScript, Node.js or PHP. My strongest expertise is in Angular, and I am open to other interesting frameworks.',
   core: ['Angular', 'TypeScript', 'Node.js', 'NestJS', "PHP"],
   // TODO(REVIEW): Phone omitted pending explicit public-display preference.
 } as const;

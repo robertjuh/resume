@@ -43,14 +43,24 @@ import { ProjectGallery } from './project-gallery';
           @if (project.role) { <h3>{{ 'My role' | t }}</h3><p>{{ project.role | t }}</p> }
           @if (project.technologies.length) { <div class="tags">@for (tech of project.technologies; track tech) { <span>{{ (tech) | t }}</span> }</div> }
           @if (project.walkthrough; as steps) {
-            <div class="walkthrough"><div class="walkthrough-heading"><h3>{{ 'How the campaign concept fits together' | t }}</h3><span class="mono">{{ 'Concept walkthrough' | t }}</span></div>
-              <div class="walkthrough-tabs" [attr.aria-label]="'Campaign walkthrough sections' | t">
+            <div class="walkthrough"><div class="walkthrough-heading"><h3>{{ 'How the game flow works' | t }}</h3><span class="mono">{{ 'Game flow' | t }}</span></div>
+              <div class="walkthrough-tabs" [attr.aria-label]="'Game flow sections' | t">
                 @for (step of steps; track step.title; let index = $index) { <button type="button" [class.active]="walkthroughIndex() === index" [attr.aria-pressed]="walkthroughIndex() === index" (click)="walkthroughIndex.set(index)"><span class="mono" aria-hidden="true">0{{ index + 1 }}</span>{{ (step.title) | t }}</button> }
               </div>
               @if (steps[walkthroughIndex()]; as step) { <div class="walkthrough-content" aria-live="polite"><h4>{{ (step.title) | t }}</h4><p>{{ (step.description) | t }}</p><ul>@for (item of step.items; track item) { <li>{{ (item) | t }}</li> }</ul></div> }
             </div>
           }
-          @if (project.technicalDetails.length) { <h3>{{ 'Technical focus' | t }}</h3>@for (detail of project.technicalDetails; track detail) { <p>{{ (detail) | t }}</p> } }
+          @if (project.technicalDetails.length || project.contributions?.length) {
+            <h3>{{ 'Technical focus' | t }}</h3>
+            @if (project.contributions; as contributions) {
+              <ul class="project-contributions">
+                @for (contribution of contributions; track contribution.title) {
+                  <li><strong>{{ contribution.title | t }}</strong><p>{{ contribution.description | t }}</p></li>
+                }
+              </ul>
+            }
+            @for (detail of project.technicalDetails; track detail) { <p>{{ (detail) | t }}</p> }
+          }
           @if (project.challenges?.length) { <h3>{{ 'Challenges' | t }}</h3><ul>@for (challenge of project.challenges; track challenge) { <li>{{ challenge | t }}</li> }</ul> }
           @if (project.learnings?.length) { <h3>{{ 'What I learned' | t }}</h3><ul>@for (learning of project.learnings; track learning) { <li>{{ learning | t }}</li> }</ul> }
           @if (project.repositoryUrl) { <a class="button secondary" [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer">{{ 'View repository' | t }} <app-icon name="external" /></a> }

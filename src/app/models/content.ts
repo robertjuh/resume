@@ -29,6 +29,7 @@ export interface Project {
   readonly liveUrl?: string;
   readonly walkthrough?: readonly WalkthroughStep[];
   readonly technicalDetails: readonly string[];
+  readonly contributions?: readonly { readonly title: string; readonly description: string }[];
   readonly role?: string;
   readonly challenges?: readonly string[];
   readonly learnings?: readonly string[];
@@ -41,7 +42,7 @@ export interface Skill {
   readonly experienceIds: readonly string[];
   readonly projectIds: readonly string[];
 }
-export interface Education { readonly title: string; readonly institution: string; readonly period: string }
+export interface Education { readonly title: string; readonly institution: string; readonly period: string; readonly completion?: string }
 export interface MediaLink extends Link { readonly embedUrl: string }
 export interface Interest { readonly name: string; readonly detail: string; readonly icon: string; readonly links?: readonly MediaLink[] }
 

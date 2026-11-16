@@ -31,7 +31,7 @@ const paths: Record<string, string> = {
     } @else if (name() === 'mail' && variant() === 'social') {
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M3 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H3Zm0 2 9 7 9-7v2l-9 7-9-7V6Z" /></svg>
     } @else {
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path [attr.d]="paths[name()] || paths['code']" /></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path [attr.d]="paths[name()] || paths['code']" /></svg>
     }
   `,
   host: { 'aria-hidden': 'true', '[class.social-icon]': "variant() === 'social'" },

@@ -5,14 +5,13 @@ export const experiences: readonly Experience[] = [
     period: 'Feb 2022 — Nov 2025', location: 'Remote',
     summary: 'ERP and business applications for inventory forecasting and market data in the fresh-produce sector.',
     highlights: [
-      'Developed across the frontend and backend using Angular, TypeScript, Node.js and NestJS.',
-      'Worked with operational data and business workflows, with Google Cloud in the project stack.',
-      'Used Git-based development workflows, including GitHub and GitLab.'
+      'Designed and built a generic Angular table component to support different CRUD screens and custom modules.',
+      'Helped set up a new NestJS backend from scratch to replace the existing vanilla JavaScript backend.',
+      'Worked with data scientists to make their data retrievable through APIs and present it in the frontend.'
     ],
     technologies: ['Angular', 'TypeScript', 'JavaScript', 'Node.js', 'NestJS', 'Google Cloud', 'GitHub', 'GitLab'],
     companyContext: 'WDD built data-driven software for fresh produce and floriculture, with a focus on forecasting and market information.',
     sources: [{ label: 'Company website', url: 'https://wdd.nl/' }],
-    // TODO(REVIEW): Add personal feature examples, architecture and authorized screenshots.
     screenshots: []
   },
   {
@@ -37,12 +36,16 @@ export const experiences: readonly Experience[] = [
     technologies: [], screenshots: []
   },
   {
-    id: 'vhbp', company: 'VHBP', role: 'Part-time Web Development / Website Customization',
-    // TODO(REVIEW): Do not assert an ongoing engagement; confirm end date.
-    period: 'Started Oct 2013', location: 'Remote',
-    summary: 'Part-time website customization for Van Herk Business Promotions, using PHP.',
-    highlights: ['Carried out customization work for a website-development business.'],
-    technologies: ['PHP'],
+    id: 'vhbp', company: 'VHBP', role: 'WordPress Customization',
+    period: 'Oct 2013 — present', location: 'Remote',
+    summary: 'Since 2013, I have worked with Van Herk Business Promotions on occasional WordPress customization, from PHP templates and dynamic content to JavaScript behavior and responsive CSS.',
+    highlights: [
+      'Customize WordPress templates with PHP and ACF/custom fields for site-specific content.',
+      'Use WP_Query and taxonomies to retrieve, organize and filter WordPress content.',
+      'Customize frontend behavior within existing WordPress websites using JavaScript.',
+      'Resolve responsive CSS and layout issues across screen sizes.'
+    ],
+    technologies: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'ACF', 'WP_Query'],
     companyContext: 'VHBP creates and maintains business websites and provides related web design and online marketing services.',
     sources: [{ label: 'Company website', url: 'https://www.vhbp.nl/' }],
     screenshots: []
