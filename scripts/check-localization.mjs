@@ -1,7 +1,7 @@
 import { chromium } from '@playwright/test';
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto('http://127.0.0.1:4173/resume/');
+await page.goto('http://127.0.0.1:4173/');
 const content = await page.locator('body').innerText();
 console.log(content);
 for (const width of [320, 360, 768, 1024, 1440]) {

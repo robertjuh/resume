@@ -7,7 +7,7 @@ try {
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   page.on('response', response => { if(response.status() >= 400) errors.push(response.url() + ': ' + response.status()); });
-  await page.goto('http://127.0.0.1:4173/resume/');
+  await page.goto('http://127.0.0.1:4173/');
   await page.locator('.hero-portrait img').evaluate(image => image.decode());
   await page.screenshot({ path: 'test-results/previews/portraits-desktop.png' });
   await page.locator('#about').scrollIntoViewIfNeeded();
@@ -20,7 +20,7 @@ try {
     console.log(JSON.stringify({ width, overflow }));
   }
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('http://127.0.0.1:4173/resume/');
+  await page.goto('http://127.0.0.1:4173/');
   await page.locator('.hero-portrait img').evaluate(image => image.decode());
   await page.locator('.hero').screenshot({ path: 'test-results/previews/portraits-mobile.png' });
   await page.locator('#about').scrollIntoViewIfNeeded();

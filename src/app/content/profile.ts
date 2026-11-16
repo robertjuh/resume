@@ -20,7 +20,7 @@ export const links = {
   github: 'https://github.com/robertjuh',
   linkedin: 'https://www.linkedin.com/in/robert-walhout-85852849',
   email: 'mailto:robertwalhout@gmail.com',
-  portfolio: 'https://www.freerunnl.nl/resume/',
+  portfolio: 'https://robertwalhout.nl/',
 } as const;
 export const sections = [
   { id: 'home', label: 'Overview', icon: 'grid' },

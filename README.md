@@ -1,6 +1,6 @@
 # Robert Walhout — portfolio & resume
 
-Static Angular portfolio for https://www.freerunnl.nl/resume/. Angular 22 standalone components, strict TypeScript, signals, CSS and native dialogs/details. No backend, SSR, accounts, inference services or API keys.
+Static Angular portfolio for https://robertwalhout.nl/. Angular 22 standalone components, strict TypeScript, signals, CSS and native dialogs/details. Hosted with Nginx on a Debian VPS, with Let's Encrypt HTTPS. No backend, SSR, accounts, inference services or API keys.
 
 ## Run locally
 
@@ -18,13 +18,15 @@ Open the Local URL printed by Angular (normally http://localhost:4200). Node is 
 
 ```sh
 npm run typecheck
-npm run build:resume
+npm run build
 npm run verify:build
 npx playwright install chromium
 npm test
 ```
 
-Production files: **dist/resume/browser/**. Preview the actual subdirectory deployment with `npm run preview` at http://localhost:4173/resume/. The preview returns 404 for unknown paths; no SPA fallback or rewrite rules.
+Production files: **dist/resume/browser/**. Preview the domain-root deployment with `npm run preview` at http://localhost:4173/. The preview returns 404 for unknown paths; no SPA fallback or rewrite rules. The `resume` in the output directory is the Angular project name, not a URL subdirectory.
+
+Run `npm run package:vps` to build, audit and create **artifacts/robertwalhout-vps.tar.gz** with a SHA-256 checksum. The package contains the public site, Nginx configuration, a site installation script and deployment instructions. See [DEPLOYMENT.md](DEPLOYMENT.md) for the exact upload and HTTPS commands for the VPS at `89.163.154.215`. Node.js is only needed on the build computer.
 
 Browser checks cover desktop/mobile navigation, filtering, project walkthroughs, keyboard dismissal/focus restoration, skill relationships, reduced motion, console errors, CV privacy and axe accessibility. Run `node scripts/capture-preview.mjs` with the preview running to capture screenshots locally.
 
@@ -58,7 +60,7 @@ screenshots: [{
 }]
 ```
 
-Relative paths resolve under /resume/. Galleries expose previous/next controls only when multiple images exist. Empty galleries show a neutral placeholder. Covers are abstract CSS/SVG illustrations, not product screenshots.
+Relative paths resolve under the domain root. Galleries expose previous/next controls only when multiple images exist. Empty galleries show a neutral placeholder. Covers are abstract CSS/SVG illustrations, not product screenshots.
 
 Add projects through the typed projects array; update verified skill relationships separately. Populate technicalDetails only after review; empty technical sections stay hidden. Optional role, challenges, learnings and repositoryUrl fields render only when supplied.
 
@@ -72,11 +74,11 @@ CV downloads and the separate print-CV component are removed at the owner's requ
 
 Translations live in src/app/i18n/nl.ts, keyed by the existing English Part A copy. Project/technology names and the supplied qualification wording are preserved. Add a Dutch translation when updating or adding English content; no live translation service is used.
 
-The supplied .htaccess returns 404 for old /resume/cv/ URLs, including files left by an earlier upload. Delete the existing cv/ directory from the hosted resume folder when deploying this update; see DEPLOYMENT.md.
+The supplied Nginx configuration returns 404 for `/cv/` and `/resume/cv/` URLs, including files left by an earlier upload. The optional `.htaccess` provides the same retirement rules for Apache; Nginx uses the files under `deploy/nginx/`.
 
 See [DEPLOYMENT.md](DEPLOYMENT.md), [CONTENT_REVIEW.md](CONTENT_REVIEW.md) and [WORK_LOG.md](WORK_LOG.md).
 
-An upload-ready ZIP is available at artifacts/resume-webreus.zip. Extract its contents directly into the existing domain web root's resume folder. It contains only compiled public files.
+The old `artifacts/resume-webreus.zip`, if present, is a legacy subdirectory build. Use the new VPS package for robertwalhout.nl.
 
 ## Developer photographs
 

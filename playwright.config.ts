@@ -2,8 +2,8 @@
 export default defineConfig({
   testDir: './tests',
   fullyParallel: true,
-  use: { baseURL: 'http://127.0.0.1:4173/resume/', trace: 'retain-on-failure' },
-  webServer: { command: 'npm run preview', url: 'http://127.0.0.1:4173/resume/', reuseExistingServer: !process.env['CI'] },
+  use: { baseURL: 'http://127.0.0.1:4173/', trace: 'retain-on-failure' },
+  webServer: { command: 'npm run preview', url: 'http://127.0.0.1:4173/', reuseExistingServer: !process.env['CI'] },
   projects: [
     { name: 'desktop', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile', use: { ...devices['iPhone 13'], defaultBrowserType: 'chromium' } }

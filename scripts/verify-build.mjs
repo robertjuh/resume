@@ -3,9 +3,11 @@ import { readFile, readdir, stat } from 'node:fs/promises';
 import { resolve, join } from 'node:path';
 const root = resolve('dist/resume/browser');
 const html = await readFile(join(root, 'index.html'), 'utf8');
-assert.match(html, /<base href="\/resume\/">/);
+assert.match(html, /<base href="\/">/);
+assert.match(html, /<link rel="canonical" href="https:\/\/robertwalhout\.nl\/">/);
+assert.match(html, /<meta property="og:url" content="https:\/\/robertwalhout\.nl\/">/);
 for (const [, path] of html.matchAll(/(?:src|href)="([^"#]+)"/g)) {
-  if (path === '/resume/' || /^(https?:|mailto:|data:)/.test(path)) continue;
+  if (path === '/' || /^(https?:|mailto:|data:)/.test(path)) continue;
   assert.ok(!path.startsWith('/'), 'Assets must be relative: ' + path);
   assert.ok((await stat(join(root, path))).isFile(), 'Missing asset: ' + path);
 }
@@ -23,5 +25,5 @@ async function inspect(directory) {
   }
 }
 await inspect(root);
-console.log('Verified /resume/ base, referenced assets, absence of CV/PDF assets, hidden print CV, source maps/private content and inference endpoints.');
+console.log('Verified domain-root base, robertwalhout.nl metadata, referenced assets, absence of CV/PDF assets, hidden print CV, source maps/private content and inference endpoints.');
 

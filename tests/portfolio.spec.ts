@@ -5,14 +5,16 @@ test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => localStorage.setItem('portfolio-language', 'en'));
 });
 
-test('portfolio loads at the deployment subpath without errors or private content', async ({ page }) => {
+test('portfolio loads at the domain root without errors or private content', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('./');
   await expect(page.getByRole('heading', { name: 'Robert Walhout.', exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'robertwalhout@gmail.com' })).toHaveAttribute('href', 'mailto:robertwalhout@gmail.com');
   await expect(page.locator('body')).not.toContainText(/PART C|TODO|6111545|Daily AI Coach|Leadsparker|33728000/);
-  await expect(page.locator('base')).toHaveAttribute('href', '/resume/');
+  await expect(page.locator('base')).toHaveAttribute('href', '/');
+  await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://robertwalhout.nl/');
+  await expect(page.locator('meta[property="og:url"]')).toHaveAttribute('content', 'https://robertwalhout.nl/');
   expect(errors).toEqual([]);
 });
 

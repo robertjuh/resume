@@ -4,11 +4,11 @@
   "private": true,
   "scripts": {
     "start": "ng serve --host 0.0.0.0",
-    "build": "npm run build:resume",
-    "build:resume": "ng build --configuration production --base-href /resume/",
+    "build": "ng build --configuration production --base-href /",
     "typecheck": "tsc --noEmit -p tsconfig.app.json",
     "test": "playwright test",
     "verify:build": "node scripts/verify-build.mjs",
+    "package:vps": "npm run build && node scripts/package-vps.mjs",
     "preview": "node scripts/preview.mjs"
   },
   "engines": {
